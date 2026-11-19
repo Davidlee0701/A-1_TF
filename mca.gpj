@@ -1,0 +1,12 @@
+#!gbuild
+#component MCADemo
+[MultiCoreArchive]              
+                -Mx
+                {optgroup=GCoresOptions} -srec
+                {optgroup=GhsCommonOptions} -o MCA_GettingStarted
+                -Ogeneral
+                
+PE0\PE0.gpj           [Core]
+sample_project\secure_cpu.gpj           [Core]
+../out/PE0.map            [Text]     
+../out/secure_cpu.map            [Text]     

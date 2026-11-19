@@ -1,0 +1,5 @@
+#!gbuild
+[Subproject]
+
+PE0\macro\cpu_ss_workaround\cpu_ss_workaround.h
+PE0\macro\cpu_ss_workaround\cpu_ss_workaround_helper.c

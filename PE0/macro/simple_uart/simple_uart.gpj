@@ -1,0 +1,12 @@
+#!gbuild
+[Subproject]
+	-I.simple_uart
+
+PE0\macro\simple_uart\Debug_UART.c
+PE0\macro\simple_uart\Debug_UART.h
+PE0\macro\simple_uart\Interrupts.c
+PE0\macro\simple_uart\Interrupts.h
+PE0\macro\simple_uart\UART.c
+PE0\macro\simple_uart\UART.h
+PE0\macro\simple_uart\UARTIO.c
+PE0\macro\simple_uart\UARTIO.h

@@ -1,0 +1,9 @@
+#!gbuild
+[Subproject]
+system_init.c
+section.ld
+vecttble0.arm
+boot.arm
+cstart0.arm
+iodef.h
+inc\R7F711001.h

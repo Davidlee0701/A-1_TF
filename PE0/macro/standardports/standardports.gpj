@@ -1,0 +1,6 @@
+#!gbuild
+[Subproject]
+
+PE0\macro\standardports\standardports_a.c
+PE0\macro\standardports\standardports_p.c
+PE0\macro\standardports\standardports.h

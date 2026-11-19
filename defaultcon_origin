@@ -1,0 +1,18 @@
+target_connection {
+     {
+        title = "U5L4"
+        type = "Custom"
+        short_type = "Custom"
+        args = "rfwserv -cpu=pe1 -mcu=RCarU5L4.mcu -D -memdisp -hwbpsc"
+        command = "rfwserv -cpu=pe1 -mcu=RCarU5L4.mcu -D -memdisp -hwbpsc"
+        logfile = ""
+        mode = ""
+        setup_script = ""
+        component_alias = ""
+        run_mode_partner = ""
+        run_mode_policy = ""
+        sane = "yes"
+        log = "no"
+        timestamp = "0"
+    }
+}

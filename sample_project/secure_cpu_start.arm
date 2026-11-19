@@ -1,0 +1,50 @@
+; ----------------------------------------------------------------------------
+; secure_cpu_start.arm : RSIP-M30A Secure CPU reset entry
+;   entry      : RSIPRESV (0x00010000) vector[1] -> __secure_start
+;   stack      : top of S-TCM (secure_cpu_section.ld SECURE_RAM)
+;   .data/.bss : initialised here because -nostartfiles (no crt0)
+; History : 13.11.2026  add .data copy / .bss clear / VTOR set
+; ----------------------------------------------------------------------------
+	.section ".text", .text
+	.globl __secure_start
+	.align 4
+__secure_start:
+	ldr sp, =(__secure_stack_top - 4)
+
+	; ---- copy .data initial values  ROM(.ROM.data) -> S-TCM(.data) ----
+	ldr r0, =__secure_data_rom_addr
+	ldr r1, =__secure_data_ram_addr
+	ldr r2, =__secure_data_size
+_secure_copy_loop:
+	cmp r2, #0
+	beq _secure_copy_done
+	ldrb r3, [r0], #1
+	strb r3, [r1], #1
+	subs r2, r2, #1
+	b _secure_copy_loop
+_secure_copy_done:
+
+	; ---- clear .bss (S-TCM) ----
+	ldr r1, =__secure_bss_start
+	ldr r2, =__secure_bss_size
+	movs r3, #0
+_secure_zero_loop:
+	cmp r2, #0
+	beq _secure_zero_done
+	strb r3, [r1], #1
+	subs r2, r2, #1
+	b _secure_zero_loop
+_secure_zero_done:
+
+	; ---- VTOR = secure vector table (= RSIPRESV) ----
+	ldr r0, =0xE000ED08
+	ldr r1, =__secure_vector_base
+	str r1, [r0]
+	dsb
+	isb
+
+	bl secure_cpu_main
+
+_secure_exit:
+	nop
+	b _secure_exit

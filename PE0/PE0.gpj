@@ -1,0 +1,41 @@
+#!gbuild
+[Program]
+
+	-D__GHS__
+	#-nostdlib
+	#-ansi
+	#-nostartfiles
+	-e __start
+	-G
+	-object_dir=objs
+	:outputDir=objs
+	#-Iansi
+	
+	-ffunctions
+	--preprocess_linker_directive_full
+
+	-map=output\u5l4_startup.map
+	-srec=output\u5l4_startup.mot
+#	-hex=output\u5l4_startup.hex
+	-o objs\u5l4_startup.out
+	-I..
+	-IPE0\rsip_hsm
+
+	-Onone
+
+device.gpj
+PE0\macro\Interrupts\interrupts.gpj
+PE0\macro\standardports\standardports.gpj
+PE0\macro\cpu_ss_workaround\cpu_ss_workaround.gpj
+PE0\macro\EXT_CLK\extclk.gpj
+PE0\macro\simple_uart\simple_uart.gpj
+main0.c
+
+set_csa.c
+#..\..\system_init.c
+
+
+LED.c
+PE0\application_code.c
+PE0\rsip_hsm\rsip_hsm_host.c
+PE0\rsip_hsm\rsip_hsm_test.c

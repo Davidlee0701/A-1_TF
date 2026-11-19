@@ -1,0 +1,23 @@
+#!gbuild
+[Program]
+
+	-D__GHS__
+	-nostartfiles
+	-nostdlib
+	-e __secure_start
+	-G
+	-object_dir=secure_objs
+	:outputDir=secure_objs
+	-ffunctions
+	--preprocess_linker_directive_full
+	-map=output\secure_cpu.map
+	-srec=output\secure_cpu.mot
+	-o objs\secure_cpu.out
+	-I..
+	-I..\PE0\rsip_hsm
+	-Onone
+
+secure_cpu_section.ld
+secure_cpu_vectors.arm
+secure_cpu_start.arm
+secure_cpu_main.c

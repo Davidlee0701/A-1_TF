@@ -1,0 +1,7 @@
+#!gbuild
+[Subproject]
+
+PE0\macro\Interrupts\interrupt_functions.c
+PE0\macro\Interrupts\interrupt_functions.h
+PE0\macro\Interrupts\interrupt_data.c
+PE0\macro\Interrupts\interrupt_data.h

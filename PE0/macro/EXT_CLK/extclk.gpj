@@ -1,0 +1,5 @@
+#!gbuild
+[Subproject]
+
+PE0\macro\EXT_CLK\extclk.c
+PE0\macro\EXT_CLK\extclk.h

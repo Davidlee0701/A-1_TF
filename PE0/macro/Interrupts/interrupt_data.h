@@ -1,0 +1,5213 @@
+#ifndef INTVEC_INTERRUPTS_DATA_H_
+#define INTVEC_INTERRUPTS_DATA_H_
+
+//#define ISR_INTECMNMI_ENABLED
+//#define ISR_INTECMMI_ENABLED
+//#define ISR_INTFPUEXCIRQ_ENABLED
+//#define ISR_INTTAUD0I0_ENABLED
+//#define ISR_INTTAUD0I2_ENABLED
+//#define ISR_INTTAUD0I4_ENABLED
+//#define ISR_INTTAUD0I6_ENABLED
+//#define ISR_INTEINTSW0_ENABLED
+//#define ISR_INTEINTSW1_ENABLED
+//#define ISR_INTEINTSW2_ENABLED
+//#define ISR_INTEINTSW3_ENABLED
+//#define ISR_INTS2HS0_ENABLED
+//#define ISR_INTWDTB0TIT_ENABLED
+//#define ISR_INTTAUD0I8_ENABLED
+//#define ISR_INTTAUD0I10_ENABLED
+//#define ISR_INTTAUD0I12_ENABLED
+//#define ISR_INTTAUD0I14_ENABLED
+//#define ISR_INTTAPA0IPEK0_ENABLED
+//#define ISR_INTTAPA0IVLY0_ENABLED
+//#define ISR_INTPDMACERR_ENABLED
+//#define ISR_INTDTSERR_ENABLED
+//#define ISR_INTDCUDEGRADPE_ENABLED
+//#define ISR_INTFL0ENDNM_ENABLED
+//#define ISR_INTFL2ENDNM_ENABLED
+//#define ISR_INTDTS7TO0_ENABLED
+//#define ISR_INTDTSCT7TO0_ENABLED
+//#define ISR_INTPDMAC0CH0_ENABLED
+//#define ISR_INTPDMAC0CH2_ENABLED
+//#define ISR_INTPDMAC0CH4_ENABLED
+//#define ISR_INTPDMAC0CH6_ENABLED
+//#define ISR_INTPDMAC0CH1_ENABLED
+//#define ISR_INTPDMAC0CH3_ENABLED
+//#define ISR_INTPDMAC0CH5_ENABLED
+//#define ISR_INTPDMAC0CH7_ENABLED
+#define ISR_INTOSTM0TINT_ENABLED
+//#define ISR_INTADCK0ERR_ENABLED
+//#define ISR_INTADCK0I0_ENABLED
+//#define ISR_INTADCK0I1_ENABLED
+//#define ISR_INTADCK0I2_ENABLED
+//#define ISR_INTADCK0I3_ENABLED
+//#define ISR_INTADCK0I4_ENABLED
+//#define ISR_INTADCK0MPX_ENABLED
+//#define ISR_INTADCK0SD_ENABLED
+//#define ISR_INTCSIH0IC_ENABLED
+//#define ISR_INTCSIH2IC_ENABLED
+//#define ISR_INTCSIH4IC_ENABLED
+//#define ISR_INTCSIH6IC_ENABLED
+//#define ISR_INTCSIH1IC_ENABLED
+//#define ISR_INTCSIH3IC_ENABLED
+//#define ISR_INTCSIH5IC_ENABLED
+//#define ISR_INTCSIH7IC_ENABLED
+//#define ISR_INTCSIH0IR_ENABLED
+//#define ISR_INTCSIH2IR_ENABLED
+//#define ISR_INTCSIH4IR_ENABLED
+//#define ISR_INTCSIH6IR_ENABLED
+//#define ISR_INTCSIH1IR_ENABLED
+//#define ISR_INTCSIH3IR_ENABLED
+//#define ISR_INTCSIH5IR_ENABLED
+//#define ISR_INTCSIH7IR_ENABLED
+//#define ISR_INTCSIH0IRE_ENABLED
+//#define ISR_INTCSIH2IRE_ENABLED
+//#define ISR_INTCSIH4IRE_ENABLED
+//#define ISR_INTCSIH6IRE_ENABLED
+//#define ISR_INTCSIH1IRE_ENABLED
+//#define ISR_INTCSIH3IRE_ENABLED
+//#define ISR_INTCSIH5IRE_ENABLED
+//#define ISR_INTCSIH7IRE_ENABLED
+//#define ISR_INTCSIH0IJC_ENABLED
+//#define ISR_INTCSIH2IJC_ENABLED
+//#define ISR_INTCSIH4IJC_ENABLED
+//#define ISR_INTCSIH6IJC_ENABLED
+//#define ISR_INTCSIH1IJC_ENABLED
+//#define ISR_INTCSIH3IJC_ENABLED
+//#define ISR_INTCSIH5IJC_ENABLED
+//#define ISR_INTCSIH7IJC_ENABLED
+//#define ISR_INTRCANGERR0_ENABLED
+//#define ISR_INTRCANGRECC0_ENABLED
+//#define ISR_INTRCAN0ERR_ENABLED
+//#define ISR_INTRCAN2ERR_ENABLED
+//#define ISR_INTRCAN4ERR_ENABLED
+//#define ISR_INTRCAN1ERR_ENABLED
+//#define ISR_INTRCAN3ERR_ENABLED
+//#define ISR_INTRCAN5ERR_ENABLED
+//#define ISR_INTRCAN0REC_ENABLED
+//#define ISR_INTRCAN2REC_ENABLED
+//#define ISR_INTRCAN4REC_ENABLED
+//#define ISR_INTRCAN1REC_ENABLED
+//#define ISR_INTRCAN3REC_ENABLED
+//#define ISR_INTRCAN5REC_ENABLED
+//#define ISR_INTRCAN0TRX_ENABLED
+//#define ISR_INTRCAN2TRX_ENABLED
+//#define ISR_INTRCAN4TRX_ENABLED
+//#define ISR_INTRCAN1TRX_ENABLED
+//#define ISR_INTRCAN3TRX_ENABLED
+//#define ISR_INTRCAN5TRX_ENABLED
+//#define ISR_INTXCAN0FUNC_ENABLED
+//#define ISR_INTXCAN0ERR_ENABLED
+//#define ISR_INTXCAN0SAFETY_ENABLED
+//#define ISR_INTTAUJ0I0_ENABLED
+//#define ISR_INTTAUJ0I1_ENABLED
+//#define ISR_INTTAUJ0I2_ENABLED
+//#define ISR_INTTAUJ0I3_ENABLED
+//#define ISR_INTTAUJ1I0_ENABLED
+//#define ISR_INTTAUJ1I1_ENABLED
+//#define ISR_INTTAUJ1I2_ENABLED
+//#define ISR_INTTAUJ1I3_ENABLED
+//#define ISR_INTTAUJ2I0_ENABLED
+//#define ISR_INTTAUJ2I1_ENABLED
+//#define ISR_INTTAUJ2I2_ENABLED
+//#define ISR_INTTAUJ2I3_ENABLED
+//#define ISR_INTTAUJ3I0_ENABLED
+//#define ISR_INTTAUJ3I1_ENABLED
+//#define ISR_INTTAUJ3I2_ENABLED
+//#define ISR_INTTAUJ3I3_ENABLED
+//#define ISR_INTTAUD0I1_ENABLED
+//#define ISR_INTTAUD0I3_ENABLED
+//#define ISR_INTTAUD0I5_ENABLED
+//#define ISR_INTTAUD0I7_ENABLED
+//#define ISR_INTTAUD0I9_ENABLED
+//#define ISR_INTTAUD0I11_ENABLED
+//#define ISR_INTTAUD0I13_ENABLED
+//#define ISR_INTTAUD0I15_ENABLED
+//#define ISR_INTTAUD1I0_ENABLED
+//#define ISR_INTTAUD1I2_ENABLED
+//#define ISR_INTTAUD1I4_ENABLED
+//#define ISR_INTTAUD1I6_ENABLED
+//#define ISR_INTTAUD1I8_ENABLED
+//#define ISR_INTTAUD1I10_ENABLED
+//#define ISR_INTTAUD1I12_ENABLED
+//#define ISR_INTTAUD1I14_ENABLED
+//#define ISR_INTTAUD1I1_ENABLED
+//#define ISR_INTTAUD1I3_ENABLED
+//#define ISR_INTTAUD1I5_ENABLED
+//#define ISR_INTTAUD1I7_ENABLED
+//#define ISR_INTTAUD1I9_ENABLED
+//#define ISR_INTTAUD1I11_ENABLED
+//#define ISR_INTTAUD1I13_ENABLED
+//#define ISR_INTTAUD1I15_ENABLED
+//#define ISR_INTRLIN30_ENABLED
+//#define ISR_INTRLIN31_ENABLED
+//#define ISR_INTRLIN32_ENABLED
+//#define ISR_INTRLIN33_ENABLED
+//#define ISR_INTRLIN34_ENABLED
+//#define ISR_INTRLIN35_ENABLED
+//#define ISR_INTRLIN36_ENABLED
+//#define ISR_INTRLIN37_ENABLED
+//#define ISR_INTRLIN30UR0_ENABLED
+//#define ISR_INTRLIN31UR0_ENABLED
+//#define ISR_INTRLIN32UR0_ENABLED
+//#define ISR_INTRLIN33UR0_ENABLED
+//#define ISR_INTRLIN34UR0_ENABLED
+//#define ISR_INTRLIN35UR0_ENABLED
+//#define ISR_INTRLIN36UR0_ENABLED
+//#define ISR_INTRLIN37UR0_ENABLED
+//#define ISR_INTRLIN30UR1_ENABLED
+//#define ISR_INTRLIN31UR1_ENABLED
+//#define ISR_INTRLIN32UR1_ENABLED
+//#define ISR_INTRLIN33UR1_ENABLED
+//#define ISR_INTRLIN34UR1_ENABLED
+//#define ISR_INTRLIN35UR1_ENABLED
+//#define ISR_INTRLIN36UR1_ENABLED
+//#define ISR_INTRLIN37UR1_ENABLED
+//#define ISR_INTRLIN30UR2_ENABLED
+//#define ISR_INTRLIN31UR2_ENABLED
+//#define ISR_INTRLIN32UR2_ENABLED
+//#define ISR_INTRLIN33UR2_ENABLED
+//#define ISR_INTRLIN34UR2_ENABLED
+//#define ISR_INTRLIN35UR2_ENABLED
+//#define ISR_INTRLIN36UR2_ENABLED
+//#define ISR_INTRLIN37UR2_ENABLED
+//#define ISR_INTRSENT0RI_ENABLED
+//#define ISR_INTRSENT2RI_ENABLED
+//#define ISR_INTRSENT4RI_ENABLED
+//#define ISR_INTRSENT6RI_ENABLED
+//#define ISR_INTRSENT1RI_ENABLED
+//#define ISR_INTRSENT3RI_ENABLED
+//#define ISR_INTRSENT5RI_ENABLED
+//#define ISR_INTRSENT7RI_ENABLED
+//#define ISR_INTRSENT0SI_ENABLED
+//#define ISR_INTRSENT2SI_ENABLED
+//#define ISR_INTRSENT4SI_ENABLED
+//#define ISR_INTRSENT6SI_ENABLED
+//#define ISR_INTRSENT1SI_ENABLED
+//#define ISR_INTRSENT3SI_ENABLED
+//#define ISR_INTRSENT5SI_ENABLED
+//#define ISR_INTRSENT7SI_ENABLED
+//#define ISR_INTENCA0IOV_ENABLED
+//#define ISR_INTENCA0I0_ENABLED
+//#define ISR_INTENCA0I1_ENABLED
+//#define ISR_INTENCA0IUD_ENABLED
+//#define ISR_INTENCA0IEC_ENABLED
+//#define ISR_IRQ0_ENABLED
+//#define ISR_IRQ1_ENABLED
+//#define ISR_IRQ2_ENABLED
+//#define ISR_IRQ3_ENABLED
+//#define ISR_IRQ4_ENABLED
+//#define ISR_IRQ5_ENABLED
+//#define ISR_IRQ6_ENABLED
+//#define ISR_IRQ16_ENABLED
+//#define ISR_IRQ18_ENABLED
+//#define ISR_IRQ19_ENABLED
+//#define ISR_IRQ20_ENABLED
+//#define ISR_IRQ21_ENABLED
+//#define ISR_IRQ22_ENABLED
+//#define ISR_IRQ23_ENABLED
+//#define ISR_IRQ24_ENABLED
+//#define ISR_INTRTCA01S_ENABLED
+//#define ISR_INTRTCA0AL_ENABLED
+//#define ISR_INTRTCA0R_ENABLED
+#define ISR_INTS2H0_ENABLED
+//#define ISR_INTPWGCG00_ENABLED
+//#define ISR_INTPWGCG01_ENABLED
+//#define ISR_INTPWGCG02_ENABLED
+//#define ISR_INTPWSDQFULL_ENABLED
+//#define ISR_INTCXP10TI_ENABLED
+//#define ISR_INTCXP12TI_ENABLED
+//#define ISR_INTCXP10RI_ENABLED
+//#define ISR_INTCXP12RI_ENABLED
+//#define ISR_INTCXP10SI_ENABLED
+//#define ISR_INTCXP12SI_ENABLED
+//#define ISR_INTCXP11TI_ENABLED
+//#define ISR_INTCXP13TI_ENABLED
+//#define ISR_INTCXP11RI_ENABLED
+//#define ISR_INTCXP13RI_ENABLED
+//#define ISR_INTCXP11SI_ENABLED
+//#define ISR_INTCXP13SI_ENABLED
+//#define ISR_INTRI3C0RESP_ENABLED
+//#define ISR_INTRI3C0CMD_ENABLED
+//#define ISR_INTRI3C0IBI_ENABLED
+//#define ISR_INTRI3C0RX0_ENABLED
+//#define ISR_INTRI3C0TX0_ENABLED
+//#define ISR_INTRI3C0RCV_ENABLED
+//#define ISR_INTRI3C0HRESP_ENABLED
+//#define ISR_INTRI3C0HCMD_ENABLED
+//#define ISR_INTRI3C0HRX_ENABLED
+//#define ISR_INTRI3C0HTX_ENABLED
+//#define ISR_INTRI3C0TEND_ENABLED
+//#define ISR_INTRI3C0EEI_ENABLED
+//#define ISR_INTRIIC0EE_ENABLED
+//#define ISR_INTRIIC0RI_ENABLED
+//#define ISR_INTRIIC0TI_ENABLED
+//#define ISR_INTRIIC0TEI_ENABLED
+//#define ISR_INTRIIC1EE_ENABLED
+//#define ISR_INTRIIC1RI_ENABLED
+//#define ISR_INTRIIC1TI_ENABLED
+//#define ISR_INTRIIC1TEI_ENABLED
+//#define ISR_INTCWEND_ENABLED
+//#define ISR_INTDPE_ENABLED
+//#define ISR_INTLPSTM0_ENABLED
+//#define ISR_INTLPSTM2_ENABLED
+//#define ISR_INTLPSTM4_ENABLED
+//#define ISR_INTLPSTM1_ENABLED
+//#define ISR_INTLPSTM3_ENABLED
+//#define ISR_INTRSIPMFATALERR_ENABLED
+//#define ISR_INTWDTBATIT_ENABLED
+//#define ISR_INTDCUTDI_ENABLED
+//#define ISR_INTSSIF0TX_ENABLED
+//#define ISR_INTSSIF0RX_ENABLED
+//#define ISR_INTSSIF0_ENABLED
+//#define ISR_INTSSIF1TX_ENABLED
+//#define ISR_INTSSIF1RX_ENABLED
+//#define ISR_INTSSIF1_ENABLED
+//#define ISR_INTPDMAC1CH0_ENABLED
+//#define ISR_INTPDMAC1CH2_ENABLED
+//#define ISR_INTPDMAC1CH4_ENABLED
+//#define ISR_INTPDMAC1CH6_ENABLED
+//#define ISR_INTPDMAC1CH1_ENABLED
+//#define ISR_INTPDMAC1CH3_ENABLED
+//#define ISR_INTPDMAC1CH5_ENABLED
+//#define ISR_INTPDMAC1CH7_ENABLED
+//#define ISR_INTTAUD2I0_ENABLED
+//#define ISR_INTTAUD2I2_ENABLED
+//#define ISR_INTTAUD2I4_ENABLED
+//#define ISR_INTTAUD2I6_ENABLED
+//#define ISR_INTTAUD2I8_ENABLED
+//#define ISR_INTTAUD2I10_ENABLED
+//#define ISR_INTTAUD2I12_ENABLED
+//#define ISR_INTTAUD2I14_ENABLED
+//#define ISR_INTTAUD2I1_ENABLED
+//#define ISR_INTTAUD2I3_ENABLED
+//#define ISR_INTTAUD2I5_ENABLED
+//#define ISR_INTTAUD2I7_ENABLED
+//#define ISR_INTTAUD2I9_ENABLED
+//#define ISR_INTTAUD2I11_ENABLED
+//#define ISR_INTTAUD2I13_ENABLED
+//#define ISR_INTTAUD2I15_ENABLED
+//#define ISR_IRQ7_ENABLED
+//#define ISR_IRQ9_ENABLED
+//#define ISR_IRQ10_ENABLED
+//#define ISR_IRQ11_ENABLED
+//#define ISR_IRQ12_ENABLED
+//#define ISR_IRQ13_ENABLED
+//#define ISR_IRQ14_ENABLED
+//#define ISR_IRQ15_ENABLED
+//#define ISR_IRQ17_ENABLED
+//#define ISR_INTADCK1ERR_ENABLED
+//#define ISR_INTADCK1I0_ENABLED
+//#define ISR_INTADCK1I1_ENABLED
+//#define ISR_INTADCK1I2_ENABLED
+//#define ISR_INTADCK1I3_ENABLED
+//#define ISR_INTADCK1I4_ENABLED
+//#define ISR_INTADCK1MPX_ENABLED
+//#define ISR_INTADCK1SD_ENABLED
+//#define ISR_INTRLIN38_ENABLED
+//#define ISR_INTRLIN39_ENABLED
+//#define ISR_INTRLIN310_ENABLED
+//#define ISR_INTRLIN311_ENABLED
+//#define ISR_INTRLIN312_ENABLED
+//#define ISR_INTRLIN313_ENABLED
+//#define ISR_INTRLIN314_ENABLED
+//#define ISR_INTRLIN315_ENABLED
+//#define ISR_INTRLIN38UR0_ENABLED
+//#define ISR_INTRLIN39UR0_ENABLED
+//#define ISR_INTRLIN310UR0_ENABLED
+//#define ISR_INTRLIN311UR0_ENABLED
+//#define ISR_INTRLIN312UR0_ENABLED
+//#define ISR_INTRLIN313UR0_ENABLED
+//#define ISR_INTRLIN314UR0_ENABLED
+//#define ISR_INTRLIN315UR0_ENABLED
+//#define ISR_INTRLIN38UR1_ENABLED
+//#define ISR_INTRLIN39UR1_ENABLED
+//#define ISR_INTRLIN310UR1_ENABLED
+//#define ISR_INTRLIN311UR1_ENABLED
+//#define ISR_INTRLIN312UR1_ENABLED
+//#define ISR_INTRLIN313UR1_ENABLED
+//#define ISR_INTRLIN314UR1_ENABLED
+//#define ISR_INTRLIN315UR1_ENABLED
+//#define ISR_INTRLIN38UR2_ENABLED
+//#define ISR_INTRLIN39UR2_ENABLED
+//#define ISR_INTRLIN310UR2_ENABLED
+//#define ISR_INTRLIN311UR2_ENABLED
+//#define ISR_INTRLIN312UR2_ENABLED
+//#define ISR_INTRLIN313UR2_ENABLED
+//#define ISR_INTRLIN314UR2_ENABLED
+//#define ISR_INTRLIN315UR2_ENABLED
+//#define ISR_INTOSTM1TINT_ENABLED
+//#define ISR_INTOSTM2TINT_ENABLED
+//#define ISR_INTETNF0DATA_ENABLED
+//#define ISR_INTETNF0ERR_ENABLED
+//#define ISR_INTETNF0MNG_ENABLED
+//#define ISR_INTETNF0MAC_ENABLED
+//#define ISR_IRQ8_ENABLED
+//#define ISR_INTPSI50SI_ENABLED
+//#define ISR_INTPSI50RI_ENABLED
+//#define ISR_INTPSI50TI_ENABLED
+//#define ISR_INTPSI51SI_ENABLED
+//#define ISR_INTPSI51RI_ENABLED
+//#define ISR_INTPSI51TI_ENABLED
+//#define ISR_INTPSI5W_ENABLED
+//#define ISR_INTMMCA0_ENABLED
+//#define ISR_INTOSTM3TINT_ENABLED
+//#define ISR_INTOSTM4TINT_ENABLED
+//#define ISR_INTXCAN1FUNC_ENABLED
+//#define ISR_INTXCAN1ERR_ENABLED
+//#define ISR_INTXCAN1SAFETY_ENABLED
+//#define ISR_INTETND00_ENABLED
+//#define ISR_INTETND01_ENABLED
+//#define ISR_INTETND02_ENABLED
+//#define ISR_INTETND03_ENABLED
+//#define ISR_INTETND04_ENABLED
+//#define ISR_INTETND05_ENABLED
+//#define ISR_INTETND06_ENABLED
+//#define ISR_INTGPTP_ENABLED
+//#define ISR_IRQ25_ENABLED
+//#define ISR_INTRLIN316_ENABLED
+//#define ISR_INTRLIN317_ENABLED
+//#define ISR_INTRLIN316UR0_ENABLED
+//#define ISR_INTRLIN317UR0_ENABLED
+//#define ISR_INTRLIN316UR1_ENABLED
+//#define ISR_INTRLIN317UR1_ENABLED
+//#define ISR_INTRLIN316UR2_ENABLED
+//#define ISR_INTRLIN317UR2_ENABLED
+
+// ** Do not change Below ** //
+
+typedef void (*vector_func)(void);
+
+typedef enum IMFU_GROUP{
+	IMFU_0,
+	IMFU_1,
+	IMFU_2,
+	IMFU_3,
+	IMFU_4,
+	IMFU_5,
+	IMFU_6,
+	IMFU_7,
+	IMFU_8,
+	IMFU_9,
+	IMFU_10,
+	IMFU_11,
+	IMFU_12,
+	IMFU_13,
+	IMFU_14,
+	IMFU_15,
+	IMFU_16,
+	IMFU_17,
+	IMFU_18,
+	IMFU_19,
+	IMFU_20,
+	IMFU_21,
+	IMFU_22,
+	IMFU_23,
+	IMFU_24,
+	IMFU_25,
+	IMFU_26,
+	IMFU_27,
+	IMFU_28,
+	IMFU_29,
+	IMFU_30,
+	IMFU_31,
+	IMFU_32,
+	IMFU_33,
+	IMFU_34,
+	IMFU_35,
+	IMFU_36,
+} IMFU_GROUP_E;
+
+typedef enum IMFU_TYPE{
+	IMFU_PULSE, //IMFUP
+	IMFU_LEVEL  //IMFUL
+} IMFU_TYPE_E;
+
+typedef enum IMFU_BIT_ASSIGNMENT{
+	IMFU_BIT_0 = 0,
+	IMFU_BIT_1 = 1,
+	IMFU_BIT_2 = 2,
+	IMFU_BIT_3 = 3,
+	IMFU_BIT_4 = 4,
+	IMFU_BIT_5 = 5,
+	IMFU_BIT_6 = 6,
+	IMFU_BIT_7 = 7,
+} IMFU_BIT_ASSIGNMENT_E;
+
+typedef enum IMFU_MASK_STATUS{
+	IMFU_UNMASKED = 0,
+	IMFU_MASKED = 1,
+} IMFU_MASK_STATUS_E;
+
+#ifdef ISR_INTECMNMI_ENABLED 
+	#ifndef NVIC_0_ENABLED
+		#define NVIC_0_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTECMMI_ENABLED 
+	#ifndef NVIC_1_ENABLED
+		#define NVIC_1_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTFPUEXCIRQ_ENABLED 
+	#ifndef NVIC_2_ENABLED
+		#define NVIC_2_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD0I0_ENABLED 
+	#ifndef NVIC_3_ENABLED
+		#define NVIC_3_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD0I2_ENABLED 
+	#ifndef NVIC_4_ENABLED
+		#define NVIC_4_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD0I4_ENABLED 
+	#ifndef NVIC_5_ENABLED
+		#define NVIC_5_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD0I6_ENABLED 
+	#ifndef NVIC_6_ENABLED
+		#define NVIC_6_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTEINTSW0_ENABLED 
+	#ifndef NVIC_7_ENABLED
+		#define NVIC_7_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTEINTSW1_ENABLED 
+	#ifndef NVIC_8_ENABLED
+		#define NVIC_8_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTEINTSW2_ENABLED 
+	#ifndef NVIC_9_ENABLED
+		#define NVIC_9_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTEINTSW3_ENABLED 
+	#ifndef NVIC_10_ENABLED
+		#define NVIC_10_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTS2HS0_ENABLED 
+	#ifndef NVIC_11_ENABLED
+		#define NVIC_11_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTWDTB0TIT_ENABLED 
+	#ifndef NVIC_12_ENABLED
+		#define NVIC_12_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD0I8_ENABLED 
+	#ifndef NVIC_13_ENABLED
+		#define NVIC_13_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD0I10_ENABLED 
+	#ifndef NVIC_14_ENABLED
+		#define NVIC_14_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD0I12_ENABLED 
+	#ifndef NVIC_15_ENABLED
+		#define NVIC_15_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD0I14_ENABLED 
+	#ifndef NVIC_16_ENABLED
+		#define NVIC_16_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAPA0IPEK0_ENABLED 
+	#ifndef NVIC_17_ENABLED
+		#define NVIC_17_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAPA0IVLY0_ENABLED 
+	#ifndef NVIC_18_ENABLED
+		#define NVIC_18_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTPDMACERR_ENABLED 
+	#ifndef NVIC_19_ENABLED
+		#define NVIC_19_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTDTSERR_ENABLED 
+	#ifndef NVIC_20_ENABLED
+		#define NVIC_20_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTDCUDEGRADPE_ENABLED 
+	#ifndef NVIC_21_ENABLED
+		#define NVIC_21_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTFL0ENDNM_ENABLED 
+	#ifndef NVIC_22_ENABLED
+		#define NVIC_22_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTFL2ENDNM_ENABLED 
+	#ifndef NVIC_23_ENABLED
+		#define NVIC_23_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTDTS7TO0_ENABLED 
+	#ifndef NVIC_24_ENABLED
+		#define NVIC_24_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTDTSCT7TO0_ENABLED 
+	#ifndef NVIC_25_ENABLED
+		#define NVIC_25_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTPDMAC0CH0_ENABLED 
+	#ifndef NVIC_26_ENABLED
+		#define NVIC_26_ENABLED
+	#endif
+	#ifndef IMFUP_0_ENABLED
+		#define IMFUP_0_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTPDMAC0CH2_ENABLED 
+	#ifndef NVIC_26_ENABLED
+		#define NVIC_26_ENABLED
+	#endif
+	#ifndef IMFUP_0_ENABLED
+		#define IMFUP_0_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTPDMAC0CH4_ENABLED 
+	#ifndef NVIC_26_ENABLED
+		#define NVIC_26_ENABLED
+	#endif
+	#ifndef IMFUP_0_ENABLED
+		#define IMFUP_0_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTPDMAC0CH6_ENABLED 
+	#ifndef NVIC_26_ENABLED
+		#define NVIC_26_ENABLED
+	#endif
+	#ifndef IMFUP_0_ENABLED
+		#define IMFUP_0_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTPDMAC0CH1_ENABLED 
+	#ifndef NVIC_27_ENABLED
+		#define NVIC_27_ENABLED
+	#endif
+	#ifndef IMFUP_1_ENABLED
+		#define IMFUP_1_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTPDMAC0CH3_ENABLED 
+	#ifndef NVIC_27_ENABLED
+		#define NVIC_27_ENABLED
+	#endif
+	#ifndef IMFUP_1_ENABLED
+		#define IMFUP_1_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTPDMAC0CH5_ENABLED 
+	#ifndef NVIC_27_ENABLED
+		#define NVIC_27_ENABLED
+	#endif
+	#ifndef IMFUP_1_ENABLED
+		#define IMFUP_1_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTPDMAC0CH7_ENABLED 
+	#ifndef NVIC_27_ENABLED
+		#define NVIC_27_ENABLED
+	#endif
+	#ifndef IMFUP_1_ENABLED
+		#define IMFUP_1_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTOSTM0TINT_ENABLED 
+	#ifndef NVIC_28_ENABLED
+		#define NVIC_28_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTADCK0ERR_ENABLED 
+	#ifndef NVIC_29_ENABLED
+		#define NVIC_29_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTADCK0I0_ENABLED 
+	#ifndef NVIC_30_ENABLED
+		#define NVIC_30_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTADCK0I1_ENABLED 
+	#ifndef NVIC_31_ENABLED
+		#define NVIC_31_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTADCK0I2_ENABLED 
+	#ifndef NVIC_32_ENABLED
+		#define NVIC_32_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTADCK0I3_ENABLED 
+	#ifndef NVIC_33_ENABLED
+		#define NVIC_33_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTADCK0I4_ENABLED 
+	#ifndef NVIC_34_ENABLED
+		#define NVIC_34_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTADCK0MPX_ENABLED 
+	#ifndef NVIC_35_ENABLED
+		#define NVIC_35_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTADCK0SD_ENABLED 
+	#ifndef NVIC_36_ENABLED
+		#define NVIC_36_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCSIH0IC_ENABLED 
+	#ifndef NVIC_37_ENABLED
+		#define NVIC_37_ENABLED
+	#endif
+	#ifndef IMFUP_2_ENABLED
+		#define IMFUP_2_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCSIH2IC_ENABLED 
+	#ifndef NVIC_37_ENABLED
+		#define NVIC_37_ENABLED
+	#endif
+	#ifndef IMFUP_2_ENABLED
+		#define IMFUP_2_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCSIH4IC_ENABLED 
+	#ifndef NVIC_37_ENABLED
+		#define NVIC_37_ENABLED
+	#endif
+	#ifndef IMFUP_2_ENABLED
+		#define IMFUP_2_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCSIH6IC_ENABLED 
+	#ifndef NVIC_37_ENABLED
+		#define NVIC_37_ENABLED
+	#endif
+	#ifndef IMFUP_2_ENABLED
+		#define IMFUP_2_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCSIH1IC_ENABLED 
+	#ifndef NVIC_38_ENABLED
+		#define NVIC_38_ENABLED
+	#endif
+	#ifndef IMFUP_3_ENABLED
+		#define IMFUP_3_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCSIH3IC_ENABLED 
+	#ifndef NVIC_38_ENABLED
+		#define NVIC_38_ENABLED
+	#endif
+	#ifndef IMFUP_3_ENABLED
+		#define IMFUP_3_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCSIH5IC_ENABLED 
+	#ifndef NVIC_38_ENABLED
+		#define NVIC_38_ENABLED
+	#endif
+	#ifndef IMFUP_3_ENABLED
+		#define IMFUP_3_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCSIH7IC_ENABLED 
+	#ifndef NVIC_38_ENABLED
+		#define NVIC_38_ENABLED
+	#endif
+	#ifndef IMFUP_3_ENABLED
+		#define IMFUP_3_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCSIH0IR_ENABLED 
+	#ifndef NVIC_39_ENABLED
+		#define NVIC_39_ENABLED
+	#endif
+	#ifndef IMFUP_4_ENABLED
+		#define IMFUP_4_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCSIH2IR_ENABLED 
+	#ifndef NVIC_39_ENABLED
+		#define NVIC_39_ENABLED
+	#endif
+	#ifndef IMFUP_4_ENABLED
+		#define IMFUP_4_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCSIH4IR_ENABLED 
+	#ifndef NVIC_39_ENABLED
+		#define NVIC_39_ENABLED
+	#endif
+	#ifndef IMFUP_4_ENABLED
+		#define IMFUP_4_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCSIH6IR_ENABLED 
+	#ifndef NVIC_39_ENABLED
+		#define NVIC_39_ENABLED
+	#endif
+	#ifndef IMFUP_4_ENABLED
+		#define IMFUP_4_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCSIH1IR_ENABLED 
+	#ifndef NVIC_40_ENABLED
+		#define NVIC_40_ENABLED
+	#endif
+	#ifndef IMFUP_5_ENABLED
+		#define IMFUP_5_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCSIH3IR_ENABLED 
+	#ifndef NVIC_40_ENABLED
+		#define NVIC_40_ENABLED
+	#endif
+	#ifndef IMFUP_5_ENABLED
+		#define IMFUP_5_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCSIH5IR_ENABLED 
+	#ifndef NVIC_40_ENABLED
+		#define NVIC_40_ENABLED
+	#endif
+	#ifndef IMFUP_5_ENABLED
+		#define IMFUP_5_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCSIH7IR_ENABLED 
+	#ifndef NVIC_40_ENABLED
+		#define NVIC_40_ENABLED
+	#endif
+	#ifndef IMFUP_5_ENABLED
+		#define IMFUP_5_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCSIH0IRE_ENABLED 
+	#ifndef NVIC_41_ENABLED
+		#define NVIC_41_ENABLED
+	#endif
+	#ifndef IMFUP_6_ENABLED
+		#define IMFUP_6_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCSIH2IRE_ENABLED 
+	#ifndef NVIC_41_ENABLED
+		#define NVIC_41_ENABLED
+	#endif
+	#ifndef IMFUP_6_ENABLED
+		#define IMFUP_6_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCSIH4IRE_ENABLED 
+	#ifndef NVIC_41_ENABLED
+		#define NVIC_41_ENABLED
+	#endif
+	#ifndef IMFUP_6_ENABLED
+		#define IMFUP_6_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCSIH6IRE_ENABLED 
+	#ifndef NVIC_41_ENABLED
+		#define NVIC_41_ENABLED
+	#endif
+	#ifndef IMFUP_6_ENABLED
+		#define IMFUP_6_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCSIH1IRE_ENABLED 
+	#ifndef NVIC_42_ENABLED
+		#define NVIC_42_ENABLED
+	#endif
+	#ifndef IMFUP_7_ENABLED
+		#define IMFUP_7_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCSIH3IRE_ENABLED 
+	#ifndef NVIC_42_ENABLED
+		#define NVIC_42_ENABLED
+	#endif
+	#ifndef IMFUP_7_ENABLED
+		#define IMFUP_7_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCSIH5IRE_ENABLED 
+	#ifndef NVIC_42_ENABLED
+		#define NVIC_42_ENABLED
+	#endif
+	#ifndef IMFUP_7_ENABLED
+		#define IMFUP_7_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCSIH7IRE_ENABLED 
+	#ifndef NVIC_42_ENABLED
+		#define NVIC_42_ENABLED
+	#endif
+	#ifndef IMFUP_7_ENABLED
+		#define IMFUP_7_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCSIH0IJC_ENABLED 
+	#ifndef NVIC_43_ENABLED
+		#define NVIC_43_ENABLED
+	#endif
+	#ifndef IMFUP_8_ENABLED
+		#define IMFUP_8_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCSIH2IJC_ENABLED 
+	#ifndef NVIC_43_ENABLED
+		#define NVIC_43_ENABLED
+	#endif
+	#ifndef IMFUP_8_ENABLED
+		#define IMFUP_8_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCSIH4IJC_ENABLED 
+	#ifndef NVIC_43_ENABLED
+		#define NVIC_43_ENABLED
+	#endif
+	#ifndef IMFUP_8_ENABLED
+		#define IMFUP_8_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCSIH6IJC_ENABLED 
+	#ifndef NVIC_43_ENABLED
+		#define NVIC_43_ENABLED
+	#endif
+	#ifndef IMFUP_8_ENABLED
+		#define IMFUP_8_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCSIH1IJC_ENABLED 
+	#ifndef NVIC_44_ENABLED
+		#define NVIC_44_ENABLED
+	#endif
+	#ifndef IMFUP_9_ENABLED
+		#define IMFUP_9_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCSIH3IJC_ENABLED 
+	#ifndef NVIC_44_ENABLED
+		#define NVIC_44_ENABLED
+	#endif
+	#ifndef IMFUP_9_ENABLED
+		#define IMFUP_9_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCSIH5IJC_ENABLED 
+	#ifndef NVIC_44_ENABLED
+		#define NVIC_44_ENABLED
+	#endif
+	#ifndef IMFUP_9_ENABLED
+		#define IMFUP_9_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCSIH7IJC_ENABLED 
+	#ifndef NVIC_44_ENABLED
+		#define NVIC_44_ENABLED
+	#endif
+	#ifndef IMFUP_9_ENABLED
+		#define IMFUP_9_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRCANGERR0_ENABLED 
+	#ifndef NVIC_45_ENABLED
+		#define NVIC_45_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRCANGRECC0_ENABLED 
+	#ifndef NVIC_46_ENABLED
+		#define NVIC_46_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRCAN0ERR_ENABLED 
+	#ifndef NVIC_47_ENABLED
+		#define NVIC_47_ENABLED
+	#endif
+	#ifndef IMFUL_0_ENABLED
+		#define IMFUL_0_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRCAN2ERR_ENABLED 
+	#ifndef NVIC_47_ENABLED
+		#define NVIC_47_ENABLED
+	#endif
+	#ifndef IMFUL_0_ENABLED
+		#define IMFUL_0_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRCAN4ERR_ENABLED 
+	#ifndef NVIC_47_ENABLED
+		#define NVIC_47_ENABLED
+	#endif
+	#ifndef IMFUL_0_ENABLED
+		#define IMFUL_0_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRCAN1ERR_ENABLED 
+	#ifndef NVIC_48_ENABLED
+		#define NVIC_48_ENABLED
+	#endif
+	#ifndef IMFUL_1_ENABLED
+		#define IMFUL_1_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRCAN3ERR_ENABLED 
+	#ifndef NVIC_48_ENABLED
+		#define NVIC_48_ENABLED
+	#endif
+	#ifndef IMFUL_1_ENABLED
+		#define IMFUL_1_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRCAN5ERR_ENABLED 
+	#ifndef NVIC_48_ENABLED
+		#define NVIC_48_ENABLED
+	#endif
+	#ifndef IMFUL_1_ENABLED
+		#define IMFUL_1_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRCAN0REC_ENABLED 
+	#ifndef NVIC_49_ENABLED
+		#define NVIC_49_ENABLED
+	#endif
+	#ifndef IMFUL_2_ENABLED
+		#define IMFUL_2_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRCAN2REC_ENABLED 
+	#ifndef NVIC_49_ENABLED
+		#define NVIC_49_ENABLED
+	#endif
+	#ifndef IMFUL_2_ENABLED
+		#define IMFUL_2_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRCAN4REC_ENABLED 
+	#ifndef NVIC_49_ENABLED
+		#define NVIC_49_ENABLED
+	#endif
+	#ifndef IMFUL_2_ENABLED
+		#define IMFUL_2_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRCAN1REC_ENABLED 
+	#ifndef NVIC_50_ENABLED
+		#define NVIC_50_ENABLED
+	#endif
+	#ifndef IMFUL_3_ENABLED
+		#define IMFUL_3_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRCAN3REC_ENABLED 
+	#ifndef NVIC_50_ENABLED
+		#define NVIC_50_ENABLED
+	#endif
+	#ifndef IMFUL_3_ENABLED
+		#define IMFUL_3_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRCAN5REC_ENABLED 
+	#ifndef NVIC_50_ENABLED
+		#define NVIC_50_ENABLED
+	#endif
+	#ifndef IMFUL_3_ENABLED
+		#define IMFUL_3_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRCAN0TRX_ENABLED 
+	#ifndef NVIC_51_ENABLED
+		#define NVIC_51_ENABLED
+	#endif
+	#ifndef IMFUL_4_ENABLED
+		#define IMFUL_4_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRCAN2TRX_ENABLED 
+	#ifndef NVIC_51_ENABLED
+		#define NVIC_51_ENABLED
+	#endif
+	#ifndef IMFUL_4_ENABLED
+		#define IMFUL_4_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRCAN4TRX_ENABLED 
+	#ifndef NVIC_51_ENABLED
+		#define NVIC_51_ENABLED
+	#endif
+	#ifndef IMFUL_4_ENABLED
+		#define IMFUL_4_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRCAN1TRX_ENABLED 
+	#ifndef NVIC_52_ENABLED
+		#define NVIC_52_ENABLED
+	#endif
+	#ifndef IMFUL_5_ENABLED
+		#define IMFUL_5_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRCAN3TRX_ENABLED 
+	#ifndef NVIC_52_ENABLED
+		#define NVIC_52_ENABLED
+	#endif
+	#ifndef IMFUL_5_ENABLED
+		#define IMFUL_5_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRCAN5TRX_ENABLED 
+	#ifndef NVIC_52_ENABLED
+		#define NVIC_52_ENABLED
+	#endif
+	#ifndef IMFUL_5_ENABLED
+		#define IMFUL_5_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTXCAN0FUNC_ENABLED 
+	#ifndef NVIC_53_ENABLED
+		#define NVIC_53_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTXCAN0ERR_ENABLED 
+	#ifndef NVIC_54_ENABLED
+		#define NVIC_54_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTXCAN0SAFETY_ENABLED 
+	#ifndef NVIC_55_ENABLED
+		#define NVIC_55_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUJ0I0_ENABLED 
+	#ifndef NVIC_56_ENABLED
+		#define NVIC_56_ENABLED
+	#endif
+	#ifndef IMFUP_10_ENABLED
+		#define IMFUP_10_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUJ0I1_ENABLED 
+	#ifndef NVIC_56_ENABLED
+		#define NVIC_56_ENABLED
+	#endif
+	#ifndef IMFUP_10_ENABLED
+		#define IMFUP_10_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUJ0I2_ENABLED 
+	#ifndef NVIC_56_ENABLED
+		#define NVIC_56_ENABLED
+	#endif
+	#ifndef IMFUP_10_ENABLED
+		#define IMFUP_10_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUJ0I3_ENABLED 
+	#ifndef NVIC_56_ENABLED
+		#define NVIC_56_ENABLED
+	#endif
+	#ifndef IMFUP_10_ENABLED
+		#define IMFUP_10_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUJ1I0_ENABLED 
+	#ifndef NVIC_57_ENABLED
+		#define NVIC_57_ENABLED
+	#endif
+	#ifndef IMFUP_11_ENABLED
+		#define IMFUP_11_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUJ1I1_ENABLED 
+	#ifndef NVIC_57_ENABLED
+		#define NVIC_57_ENABLED
+	#endif
+	#ifndef IMFUP_11_ENABLED
+		#define IMFUP_11_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUJ1I2_ENABLED 
+	#ifndef NVIC_57_ENABLED
+		#define NVIC_57_ENABLED
+	#endif
+	#ifndef IMFUP_11_ENABLED
+		#define IMFUP_11_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUJ1I3_ENABLED 
+	#ifndef NVIC_57_ENABLED
+		#define NVIC_57_ENABLED
+	#endif
+	#ifndef IMFUP_11_ENABLED
+		#define IMFUP_11_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUJ2I0_ENABLED 
+	#ifndef NVIC_58_ENABLED
+		#define NVIC_58_ENABLED
+	#endif
+	#ifndef IMFUP_12_ENABLED
+		#define IMFUP_12_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUJ2I1_ENABLED 
+	#ifndef NVIC_58_ENABLED
+		#define NVIC_58_ENABLED
+	#endif
+	#ifndef IMFUP_12_ENABLED
+		#define IMFUP_12_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUJ2I2_ENABLED 
+	#ifndef NVIC_58_ENABLED
+		#define NVIC_58_ENABLED
+	#endif
+	#ifndef IMFUP_12_ENABLED
+		#define IMFUP_12_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUJ2I3_ENABLED 
+	#ifndef NVIC_58_ENABLED
+		#define NVIC_58_ENABLED
+	#endif
+	#ifndef IMFUP_12_ENABLED
+		#define IMFUP_12_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUJ3I0_ENABLED 
+	#ifndef NVIC_59_ENABLED
+		#define NVIC_59_ENABLED
+	#endif
+	#ifndef IMFUP_13_ENABLED
+		#define IMFUP_13_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUJ3I1_ENABLED 
+	#ifndef NVIC_59_ENABLED
+		#define NVIC_59_ENABLED
+	#endif
+	#ifndef IMFUP_13_ENABLED
+		#define IMFUP_13_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUJ3I2_ENABLED 
+	#ifndef NVIC_59_ENABLED
+		#define NVIC_59_ENABLED
+	#endif
+	#ifndef IMFUP_13_ENABLED
+		#define IMFUP_13_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUJ3I3_ENABLED 
+	#ifndef NVIC_59_ENABLED
+		#define NVIC_59_ENABLED
+	#endif
+	#ifndef IMFUP_13_ENABLED
+		#define IMFUP_13_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD0I1_ENABLED 
+	#ifndef NVIC_60_ENABLED
+		#define NVIC_60_ENABLED
+	#endif
+	#ifndef IMFUP_14_ENABLED
+		#define IMFUP_14_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD0I3_ENABLED 
+	#ifndef NVIC_60_ENABLED
+		#define NVIC_60_ENABLED
+	#endif
+	#ifndef IMFUP_14_ENABLED
+		#define IMFUP_14_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD0I5_ENABLED 
+	#ifndef NVIC_60_ENABLED
+		#define NVIC_60_ENABLED
+	#endif
+	#ifndef IMFUP_14_ENABLED
+		#define IMFUP_14_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD0I7_ENABLED 
+	#ifndef NVIC_60_ENABLED
+		#define NVIC_60_ENABLED
+	#endif
+	#ifndef IMFUP_14_ENABLED
+		#define IMFUP_14_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD0I9_ENABLED 
+	#ifndef NVIC_60_ENABLED
+		#define NVIC_60_ENABLED
+	#endif
+	#ifndef IMFUP_14_ENABLED
+		#define IMFUP_14_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD0I11_ENABLED 
+	#ifndef NVIC_60_ENABLED
+		#define NVIC_60_ENABLED
+	#endif
+	#ifndef IMFUP_14_ENABLED
+		#define IMFUP_14_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD0I13_ENABLED 
+	#ifndef NVIC_60_ENABLED
+		#define NVIC_60_ENABLED
+	#endif
+	#ifndef IMFUP_14_ENABLED
+		#define IMFUP_14_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD0I15_ENABLED 
+	#ifndef NVIC_60_ENABLED
+		#define NVIC_60_ENABLED
+	#endif
+	#ifndef IMFUP_14_ENABLED
+		#define IMFUP_14_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD1I0_ENABLED 
+	#ifndef NVIC_61_ENABLED
+		#define NVIC_61_ENABLED
+	#endif
+	#ifndef IMFUP_15_ENABLED
+		#define IMFUP_15_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD1I2_ENABLED 
+	#ifndef NVIC_61_ENABLED
+		#define NVIC_61_ENABLED
+	#endif
+	#ifndef IMFUP_15_ENABLED
+		#define IMFUP_15_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD1I4_ENABLED 
+	#ifndef NVIC_61_ENABLED
+		#define NVIC_61_ENABLED
+	#endif
+	#ifndef IMFUP_15_ENABLED
+		#define IMFUP_15_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD1I6_ENABLED 
+	#ifndef NVIC_61_ENABLED
+		#define NVIC_61_ENABLED
+	#endif
+	#ifndef IMFUP_15_ENABLED
+		#define IMFUP_15_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD1I8_ENABLED 
+	#ifndef NVIC_61_ENABLED
+		#define NVIC_61_ENABLED
+	#endif
+	#ifndef IMFUP_15_ENABLED
+		#define IMFUP_15_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD1I10_ENABLED 
+	#ifndef NVIC_61_ENABLED
+		#define NVIC_61_ENABLED
+	#endif
+	#ifndef IMFUP_15_ENABLED
+		#define IMFUP_15_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD1I12_ENABLED 
+	#ifndef NVIC_61_ENABLED
+		#define NVIC_61_ENABLED
+	#endif
+	#ifndef IMFUP_15_ENABLED
+		#define IMFUP_15_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD1I14_ENABLED 
+	#ifndef NVIC_61_ENABLED
+		#define NVIC_61_ENABLED
+	#endif
+	#ifndef IMFUP_15_ENABLED
+		#define IMFUP_15_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD1I1_ENABLED 
+	#ifndef NVIC_62_ENABLED
+		#define NVIC_62_ENABLED
+	#endif
+	#ifndef IMFUP_16_ENABLED
+		#define IMFUP_16_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD1I3_ENABLED 
+	#ifndef NVIC_62_ENABLED
+		#define NVIC_62_ENABLED
+	#endif
+	#ifndef IMFUP_16_ENABLED
+		#define IMFUP_16_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD1I5_ENABLED 
+	#ifndef NVIC_62_ENABLED
+		#define NVIC_62_ENABLED
+	#endif
+	#ifndef IMFUP_16_ENABLED
+		#define IMFUP_16_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD1I7_ENABLED 
+	#ifndef NVIC_62_ENABLED
+		#define NVIC_62_ENABLED
+	#endif
+	#ifndef IMFUP_16_ENABLED
+		#define IMFUP_16_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD1I9_ENABLED 
+	#ifndef NVIC_62_ENABLED
+		#define NVIC_62_ENABLED
+	#endif
+	#ifndef IMFUP_16_ENABLED
+		#define IMFUP_16_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD1I11_ENABLED 
+	#ifndef NVIC_62_ENABLED
+		#define NVIC_62_ENABLED
+	#endif
+	#ifndef IMFUP_16_ENABLED
+		#define IMFUP_16_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD1I13_ENABLED 
+	#ifndef NVIC_62_ENABLED
+		#define NVIC_62_ENABLED
+	#endif
+	#ifndef IMFUP_16_ENABLED
+		#define IMFUP_16_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD1I15_ENABLED 
+	#ifndef NVIC_62_ENABLED
+		#define NVIC_62_ENABLED
+	#endif
+	#ifndef IMFUP_16_ENABLED
+		#define IMFUP_16_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN30_ENABLED 
+	#ifndef NVIC_63_ENABLED
+		#define NVIC_63_ENABLED
+	#endif
+	#ifndef IMFUP_17_ENABLED
+		#define IMFUP_17_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN31_ENABLED 
+	#ifndef NVIC_63_ENABLED
+		#define NVIC_63_ENABLED
+	#endif
+	#ifndef IMFUP_17_ENABLED
+		#define IMFUP_17_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN32_ENABLED 
+	#ifndef NVIC_63_ENABLED
+		#define NVIC_63_ENABLED
+	#endif
+	#ifndef IMFUP_17_ENABLED
+		#define IMFUP_17_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN33_ENABLED 
+	#ifndef NVIC_63_ENABLED
+		#define NVIC_63_ENABLED
+	#endif
+	#ifndef IMFUP_17_ENABLED
+		#define IMFUP_17_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN34_ENABLED 
+	#ifndef NVIC_63_ENABLED
+		#define NVIC_63_ENABLED
+	#endif
+	#ifndef IMFUP_17_ENABLED
+		#define IMFUP_17_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN35_ENABLED 
+	#ifndef NVIC_63_ENABLED
+		#define NVIC_63_ENABLED
+	#endif
+	#ifndef IMFUP_17_ENABLED
+		#define IMFUP_17_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN36_ENABLED 
+	#ifndef NVIC_63_ENABLED
+		#define NVIC_63_ENABLED
+	#endif
+	#ifndef IMFUP_17_ENABLED
+		#define IMFUP_17_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN37_ENABLED 
+	#ifndef NVIC_63_ENABLED
+		#define NVIC_63_ENABLED
+	#endif
+	#ifndef IMFUP_17_ENABLED
+		#define IMFUP_17_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN30UR0_ENABLED 
+	#ifndef NVIC_64_ENABLED
+		#define NVIC_64_ENABLED
+	#endif
+	#ifndef IMFUP_18_ENABLED
+		#define IMFUP_18_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN31UR0_ENABLED 
+	#ifndef NVIC_64_ENABLED
+		#define NVIC_64_ENABLED
+	#endif
+	#ifndef IMFUP_18_ENABLED
+		#define IMFUP_18_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN32UR0_ENABLED 
+	#ifndef NVIC_64_ENABLED
+		#define NVIC_64_ENABLED
+	#endif
+	#ifndef IMFUP_18_ENABLED
+		#define IMFUP_18_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN33UR0_ENABLED 
+	#ifndef NVIC_64_ENABLED
+		#define NVIC_64_ENABLED
+	#endif
+	#ifndef IMFUP_18_ENABLED
+		#define IMFUP_18_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN34UR0_ENABLED 
+	#ifndef NVIC_64_ENABLED
+		#define NVIC_64_ENABLED
+	#endif
+	#ifndef IMFUP_18_ENABLED
+		#define IMFUP_18_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN35UR0_ENABLED 
+	#ifndef NVIC_64_ENABLED
+		#define NVIC_64_ENABLED
+	#endif
+	#ifndef IMFUP_18_ENABLED
+		#define IMFUP_18_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN36UR0_ENABLED 
+	#ifndef NVIC_64_ENABLED
+		#define NVIC_64_ENABLED
+	#endif
+	#ifndef IMFUP_18_ENABLED
+		#define IMFUP_18_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN37UR0_ENABLED 
+	#ifndef NVIC_64_ENABLED
+		#define NVIC_64_ENABLED
+	#endif
+	#ifndef IMFUP_18_ENABLED
+		#define IMFUP_18_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN30UR1_ENABLED 
+	#ifndef NVIC_65_ENABLED
+		#define NVIC_65_ENABLED
+	#endif
+	#ifndef IMFUP_19_ENABLED
+		#define IMFUP_19_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN31UR1_ENABLED 
+	#ifndef NVIC_65_ENABLED
+		#define NVIC_65_ENABLED
+	#endif
+	#ifndef IMFUP_19_ENABLED
+		#define IMFUP_19_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN32UR1_ENABLED 
+	#ifndef NVIC_65_ENABLED
+		#define NVIC_65_ENABLED
+	#endif
+	#ifndef IMFUP_19_ENABLED
+		#define IMFUP_19_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN33UR1_ENABLED 
+	#ifndef NVIC_65_ENABLED
+		#define NVIC_65_ENABLED
+	#endif
+	#ifndef IMFUP_19_ENABLED
+		#define IMFUP_19_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN34UR1_ENABLED 
+	#ifndef NVIC_65_ENABLED
+		#define NVIC_65_ENABLED
+	#endif
+	#ifndef IMFUP_19_ENABLED
+		#define IMFUP_19_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN35UR1_ENABLED 
+	#ifndef NVIC_65_ENABLED
+		#define NVIC_65_ENABLED
+	#endif
+	#ifndef IMFUP_19_ENABLED
+		#define IMFUP_19_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN36UR1_ENABLED 
+	#ifndef NVIC_65_ENABLED
+		#define NVIC_65_ENABLED
+	#endif
+	#ifndef IMFUP_19_ENABLED
+		#define IMFUP_19_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN37UR1_ENABLED 
+	#ifndef NVIC_65_ENABLED
+		#define NVIC_65_ENABLED
+	#endif
+	#ifndef IMFUP_19_ENABLED
+		#define IMFUP_19_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN30UR2_ENABLED 
+	#ifndef NVIC_66_ENABLED
+		#define NVIC_66_ENABLED
+	#endif
+	#ifndef IMFUP_20_ENABLED
+		#define IMFUP_20_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN31UR2_ENABLED 
+	#ifndef NVIC_66_ENABLED
+		#define NVIC_66_ENABLED
+	#endif
+	#ifndef IMFUP_20_ENABLED
+		#define IMFUP_20_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN32UR2_ENABLED 
+	#ifndef NVIC_66_ENABLED
+		#define NVIC_66_ENABLED
+	#endif
+	#ifndef IMFUP_20_ENABLED
+		#define IMFUP_20_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN33UR2_ENABLED 
+	#ifndef NVIC_66_ENABLED
+		#define NVIC_66_ENABLED
+	#endif
+	#ifndef IMFUP_20_ENABLED
+		#define IMFUP_20_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN34UR2_ENABLED 
+	#ifndef NVIC_66_ENABLED
+		#define NVIC_66_ENABLED
+	#endif
+	#ifndef IMFUP_20_ENABLED
+		#define IMFUP_20_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN35UR2_ENABLED 
+	#ifndef NVIC_66_ENABLED
+		#define NVIC_66_ENABLED
+	#endif
+	#ifndef IMFUP_20_ENABLED
+		#define IMFUP_20_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN36UR2_ENABLED 
+	#ifndef NVIC_66_ENABLED
+		#define NVIC_66_ENABLED
+	#endif
+	#ifndef IMFUP_20_ENABLED
+		#define IMFUP_20_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN37UR2_ENABLED 
+	#ifndef NVIC_66_ENABLED
+		#define NVIC_66_ENABLED
+	#endif
+	#ifndef IMFUP_20_ENABLED
+		#define IMFUP_20_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRSENT0RI_ENABLED 
+	#ifndef NVIC_67_ENABLED
+		#define NVIC_67_ENABLED
+	#endif
+	#ifndef IMFUP_21_ENABLED
+		#define IMFUP_21_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRSENT2RI_ENABLED 
+	#ifndef NVIC_67_ENABLED
+		#define NVIC_67_ENABLED
+	#endif
+	#ifndef IMFUP_21_ENABLED
+		#define IMFUP_21_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRSENT4RI_ENABLED 
+	#ifndef NVIC_67_ENABLED
+		#define NVIC_67_ENABLED
+	#endif
+	#ifndef IMFUP_21_ENABLED
+		#define IMFUP_21_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRSENT6RI_ENABLED 
+	#ifndef NVIC_67_ENABLED
+		#define NVIC_67_ENABLED
+	#endif
+	#ifndef IMFUP_21_ENABLED
+		#define IMFUP_21_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRSENT1RI_ENABLED 
+	#ifndef NVIC_68_ENABLED
+		#define NVIC_68_ENABLED
+	#endif
+	#ifndef IMFUP_22_ENABLED
+		#define IMFUP_22_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRSENT3RI_ENABLED 
+	#ifndef NVIC_68_ENABLED
+		#define NVIC_68_ENABLED
+	#endif
+	#ifndef IMFUP_22_ENABLED
+		#define IMFUP_22_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRSENT5RI_ENABLED 
+	#ifndef NVIC_68_ENABLED
+		#define NVIC_68_ENABLED
+	#endif
+	#ifndef IMFUP_22_ENABLED
+		#define IMFUP_22_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRSENT7RI_ENABLED 
+	#ifndef NVIC_68_ENABLED
+		#define NVIC_68_ENABLED
+	#endif
+	#ifndef IMFUP_22_ENABLED
+		#define IMFUP_22_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRSENT0SI_ENABLED 
+	#ifndef NVIC_69_ENABLED
+		#define NVIC_69_ENABLED
+	#endif
+	#ifndef IMFUL_6_ENABLED
+		#define IMFUL_6_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRSENT2SI_ENABLED 
+	#ifndef NVIC_69_ENABLED
+		#define NVIC_69_ENABLED
+	#endif
+	#ifndef IMFUL_6_ENABLED
+		#define IMFUL_6_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRSENT4SI_ENABLED 
+	#ifndef NVIC_69_ENABLED
+		#define NVIC_69_ENABLED
+	#endif
+	#ifndef IMFUL_6_ENABLED
+		#define IMFUL_6_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRSENT6SI_ENABLED 
+	#ifndef NVIC_69_ENABLED
+		#define NVIC_69_ENABLED
+	#endif
+	#ifndef IMFUL_6_ENABLED
+		#define IMFUL_6_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRSENT1SI_ENABLED 
+	#ifndef NVIC_70_ENABLED
+		#define NVIC_70_ENABLED
+	#endif
+	#ifndef IMFUL_7_ENABLED
+		#define IMFUL_7_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRSENT3SI_ENABLED 
+	#ifndef NVIC_70_ENABLED
+		#define NVIC_70_ENABLED
+	#endif
+	#ifndef IMFUL_7_ENABLED
+		#define IMFUL_7_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRSENT5SI_ENABLED 
+	#ifndef NVIC_70_ENABLED
+		#define NVIC_70_ENABLED
+	#endif
+	#ifndef IMFUL_7_ENABLED
+		#define IMFUL_7_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRSENT7SI_ENABLED 
+	#ifndef NVIC_70_ENABLED
+		#define NVIC_70_ENABLED
+	#endif
+	#ifndef IMFUL_7_ENABLED
+		#define IMFUL_7_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTENCA0IOV_ENABLED 
+	#ifndef NVIC_71_ENABLED
+		#define NVIC_71_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTENCA0I0_ENABLED 
+	#ifndef NVIC_72_ENABLED
+		#define NVIC_72_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTENCA0I1_ENABLED 
+	#ifndef NVIC_73_ENABLED
+		#define NVIC_73_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTENCA0IUD_ENABLED 
+	#ifndef NVIC_74_ENABLED
+		#define NVIC_74_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTENCA0IEC_ENABLED 
+	#ifndef NVIC_75_ENABLED
+		#define NVIC_75_ENABLED
+	#endif
+#endif
+#ifdef ISR_IRQ0_ENABLED 
+	#ifndef NVIC_77_ENABLED
+		#define NVIC_77_ENABLED
+	#endif
+#endif
+#ifdef ISR_IRQ1_ENABLED 
+	#ifndef NVIC_78_ENABLED
+		#define NVIC_78_ENABLED
+	#endif
+#endif
+#ifdef ISR_IRQ2_ENABLED 
+	#ifndef NVIC_79_ENABLED
+		#define NVIC_79_ENABLED
+	#endif
+#endif
+#ifdef ISR_IRQ3_ENABLED 
+	#ifndef NVIC_80_ENABLED
+		#define NVIC_80_ENABLED
+	#endif
+#endif
+#ifdef ISR_IRQ4_ENABLED 
+	#ifndef NVIC_81_ENABLED
+		#define NVIC_81_ENABLED
+	#endif
+#endif
+#ifdef ISR_IRQ5_ENABLED 
+	#ifndef NVIC_82_ENABLED
+		#define NVIC_82_ENABLED
+	#endif
+#endif
+#ifdef ISR_IRQ6_ENABLED 
+	#ifndef NVIC_83_ENABLED
+		#define NVIC_83_ENABLED
+	#endif
+#endif
+#ifdef ISR_IRQ16_ENABLED 
+	#ifndef NVIC_84_ENABLED
+		#define NVIC_84_ENABLED
+	#endif
+#endif
+#ifdef ISR_IRQ18_ENABLED 
+	#ifndef NVIC_85_ENABLED
+		#define NVIC_85_ENABLED
+	#endif
+#endif
+#ifdef ISR_IRQ19_ENABLED 
+	#ifndef NVIC_86_ENABLED
+		#define NVIC_86_ENABLED
+	#endif
+#endif
+#ifdef ISR_IRQ20_ENABLED 
+	#ifndef NVIC_87_ENABLED
+		#define NVIC_87_ENABLED
+	#endif
+#endif
+#ifdef ISR_IRQ21_ENABLED 
+	#ifndef NVIC_88_ENABLED
+		#define NVIC_88_ENABLED
+	#endif
+#endif
+#ifdef ISR_IRQ22_ENABLED 
+	#ifndef NVIC_89_ENABLED
+		#define NVIC_89_ENABLED
+	#endif
+#endif
+#ifdef ISR_IRQ23_ENABLED 
+	#ifndef NVIC_90_ENABLED
+		#define NVIC_90_ENABLED
+	#endif
+#endif
+#ifdef ISR_IRQ24_ENABLED 
+	#ifndef NVIC_91_ENABLED
+		#define NVIC_91_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRTCA01S_ENABLED 
+	#ifndef NVIC_92_ENABLED
+		#define NVIC_92_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRTCA0AL_ENABLED 
+	#ifndef NVIC_93_ENABLED
+		#define NVIC_93_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRTCA0R_ENABLED 
+	#ifndef NVIC_94_ENABLED
+		#define NVIC_94_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTS2H0_ENABLED 
+	#ifndef NVIC_95_ENABLED
+		#define NVIC_95_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTPWGCG00_ENABLED 
+	#ifndef NVIC_96_ENABLED
+		#define NVIC_96_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTPWGCG01_ENABLED 
+	#ifndef NVIC_97_ENABLED
+		#define NVIC_97_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTPWGCG02_ENABLED 
+	#ifndef NVIC_98_ENABLED
+		#define NVIC_98_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTPWSDQFULL_ENABLED 
+	#ifndef NVIC_99_ENABLED
+		#define NVIC_99_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCXP10TI_ENABLED 
+	#ifndef NVIC_100_ENABLED
+		#define NVIC_100_ENABLED
+	#endif
+	#ifndef IMFUL_8_ENABLED
+		#define IMFUL_8_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCXP12TI_ENABLED 
+	#ifndef NVIC_100_ENABLED
+		#define NVIC_100_ENABLED
+	#endif
+	#ifndef IMFUL_8_ENABLED
+		#define IMFUL_8_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCXP10RI_ENABLED 
+	#ifndef NVIC_101_ENABLED
+		#define NVIC_101_ENABLED
+	#endif
+	#ifndef IMFUL_9_ENABLED
+		#define IMFUL_9_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCXP12RI_ENABLED 
+	#ifndef NVIC_101_ENABLED
+		#define NVIC_101_ENABLED
+	#endif
+	#ifndef IMFUL_9_ENABLED
+		#define IMFUL_9_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCXP10SI_ENABLED 
+	#ifndef NVIC_102_ENABLED
+		#define NVIC_102_ENABLED
+	#endif
+	#ifndef IMFUL_10_ENABLED
+		#define IMFUL_10_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCXP12SI_ENABLED 
+	#ifndef NVIC_102_ENABLED
+		#define NVIC_102_ENABLED
+	#endif
+	#ifndef IMFUL_10_ENABLED
+		#define IMFUL_10_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCXP11TI_ENABLED 
+	#ifndef NVIC_103_ENABLED
+		#define NVIC_103_ENABLED
+	#endif
+	#ifndef IMFUL_11_ENABLED
+		#define IMFUL_11_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCXP13TI_ENABLED 
+	#ifndef NVIC_103_ENABLED
+		#define NVIC_103_ENABLED
+	#endif
+	#ifndef IMFUL_11_ENABLED
+		#define IMFUL_11_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCXP11RI_ENABLED 
+	#ifndef NVIC_104_ENABLED
+		#define NVIC_104_ENABLED
+	#endif
+	#ifndef IMFUL_12_ENABLED
+		#define IMFUL_12_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCXP13RI_ENABLED 
+	#ifndef NVIC_104_ENABLED
+		#define NVIC_104_ENABLED
+	#endif
+	#ifndef IMFUL_12_ENABLED
+		#define IMFUL_12_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCXP11SI_ENABLED 
+	#ifndef NVIC_105_ENABLED
+		#define NVIC_105_ENABLED
+	#endif
+	#ifndef IMFUL_13_ENABLED
+		#define IMFUL_13_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCXP13SI_ENABLED 
+	#ifndef NVIC_105_ENABLED
+		#define NVIC_105_ENABLED
+	#endif
+	#ifndef IMFUL_13_ENABLED
+		#define IMFUL_13_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRI3C0RESP_ENABLED 
+	#ifndef NVIC_106_ENABLED
+		#define NVIC_106_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRI3C0CMD_ENABLED 
+	#ifndef NVIC_107_ENABLED
+		#define NVIC_107_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRI3C0IBI_ENABLED 
+	#ifndef NVIC_108_ENABLED
+		#define NVIC_108_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRI3C0RX0_ENABLED 
+	#ifndef NVIC_109_ENABLED
+		#define NVIC_109_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRI3C0TX0_ENABLED 
+	#ifndef NVIC_110_ENABLED
+		#define NVIC_110_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRI3C0RCV_ENABLED 
+	#ifndef NVIC_111_ENABLED
+		#define NVIC_111_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRI3C0HRESP_ENABLED 
+	#ifndef NVIC_112_ENABLED
+		#define NVIC_112_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRI3C0HCMD_ENABLED 
+	#ifndef NVIC_113_ENABLED
+		#define NVIC_113_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRI3C0HRX_ENABLED 
+	#ifndef NVIC_114_ENABLED
+		#define NVIC_114_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRI3C0HTX_ENABLED 
+	#ifndef NVIC_115_ENABLED
+		#define NVIC_115_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRI3C0TEND_ENABLED 
+	#ifndef NVIC_116_ENABLED
+		#define NVIC_116_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRI3C0EEI_ENABLED 
+	#ifndef NVIC_117_ENABLED
+		#define NVIC_117_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRIIC0EE_ENABLED 
+	#ifndef NVIC_118_ENABLED
+		#define NVIC_118_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRIIC0RI_ENABLED 
+	#ifndef NVIC_119_ENABLED
+		#define NVIC_119_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRIIC0TI_ENABLED 
+	#ifndef NVIC_120_ENABLED
+		#define NVIC_120_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRIIC0TEI_ENABLED 
+	#ifndef NVIC_121_ENABLED
+		#define NVIC_121_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRIIC1EE_ENABLED 
+	#ifndef NVIC_122_ENABLED
+		#define NVIC_122_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRIIC1RI_ENABLED 
+	#ifndef NVIC_123_ENABLED
+		#define NVIC_123_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRIIC1TI_ENABLED 
+	#ifndef NVIC_124_ENABLED
+		#define NVIC_124_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRIIC1TEI_ENABLED 
+	#ifndef NVIC_125_ENABLED
+		#define NVIC_125_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTCWEND_ENABLED 
+	#ifndef NVIC_126_ENABLED
+		#define NVIC_126_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTDPE_ENABLED 
+	#ifndef NVIC_127_ENABLED
+		#define NVIC_127_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTLPSTM0_ENABLED 
+	#ifndef NVIC_128_ENABLED
+		#define NVIC_128_ENABLED
+	#endif
+	#ifndef IMFUP_23_ENABLED
+		#define IMFUP_23_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTLPSTM2_ENABLED 
+	#ifndef NVIC_128_ENABLED
+		#define NVIC_128_ENABLED
+	#endif
+	#ifndef IMFUP_23_ENABLED
+		#define IMFUP_23_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTLPSTM4_ENABLED 
+	#ifndef NVIC_128_ENABLED
+		#define NVIC_128_ENABLED
+	#endif
+	#ifndef IMFUP_23_ENABLED
+		#define IMFUP_23_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTLPSTM1_ENABLED 
+	#ifndef NVIC_129_ENABLED
+		#define NVIC_129_ENABLED
+	#endif
+	#ifndef IMFUP_24_ENABLED
+		#define IMFUP_24_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTLPSTM3_ENABLED 
+	#ifndef NVIC_129_ENABLED
+		#define NVIC_129_ENABLED
+	#endif
+	#ifndef IMFUP_24_ENABLED
+		#define IMFUP_24_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRSIPMFATALERR_ENABLED 
+	#ifndef NVIC_130_ENABLED
+		#define NVIC_130_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTWDTBATIT_ENABLED 
+	#ifndef NVIC_131_ENABLED
+		#define NVIC_131_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTDCUTDI_ENABLED 
+	#ifndef NVIC_132_ENABLED
+		#define NVIC_132_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTSSIF0TX_ENABLED 
+	#ifndef NVIC_133_ENABLED
+		#define NVIC_133_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTSSIF0RX_ENABLED 
+	#ifndef NVIC_134_ENABLED
+		#define NVIC_134_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTSSIF0_ENABLED 
+	#ifndef NVIC_135_ENABLED
+		#define NVIC_135_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTSSIF1TX_ENABLED 
+	#ifndef NVIC_136_ENABLED
+		#define NVIC_136_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTSSIF1RX_ENABLED 
+	#ifndef NVIC_137_ENABLED
+		#define NVIC_137_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTSSIF1_ENABLED 
+	#ifndef NVIC_138_ENABLED
+		#define NVIC_138_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTPDMAC1CH0_ENABLED 
+	#ifndef NVIC_139_ENABLED
+		#define NVIC_139_ENABLED
+	#endif
+	#ifndef IMFUP_25_ENABLED
+		#define IMFUP_25_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTPDMAC1CH2_ENABLED 
+	#ifndef NVIC_139_ENABLED
+		#define NVIC_139_ENABLED
+	#endif
+	#ifndef IMFUP_25_ENABLED
+		#define IMFUP_25_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTPDMAC1CH4_ENABLED 
+	#ifndef NVIC_139_ENABLED
+		#define NVIC_139_ENABLED
+	#endif
+	#ifndef IMFUP_25_ENABLED
+		#define IMFUP_25_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTPDMAC1CH6_ENABLED 
+	#ifndef NVIC_139_ENABLED
+		#define NVIC_139_ENABLED
+	#endif
+	#ifndef IMFUP_25_ENABLED
+		#define IMFUP_25_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTPDMAC1CH1_ENABLED 
+	#ifndef NVIC_140_ENABLED
+		#define NVIC_140_ENABLED
+	#endif
+	#ifndef IMFUP_26_ENABLED
+		#define IMFUP_26_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTPDMAC1CH3_ENABLED 
+	#ifndef NVIC_140_ENABLED
+		#define NVIC_140_ENABLED
+	#endif
+	#ifndef IMFUP_26_ENABLED
+		#define IMFUP_26_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTPDMAC1CH5_ENABLED 
+	#ifndef NVIC_140_ENABLED
+		#define NVIC_140_ENABLED
+	#endif
+	#ifndef IMFUP_26_ENABLED
+		#define IMFUP_26_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTPDMAC1CH7_ENABLED 
+	#ifndef NVIC_140_ENABLED
+		#define NVIC_140_ENABLED
+	#endif
+	#ifndef IMFUP_26_ENABLED
+		#define IMFUP_26_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD2I0_ENABLED 
+	#ifndef NVIC_141_ENABLED
+		#define NVIC_141_ENABLED
+	#endif
+	#ifndef IMFUP_27_ENABLED
+		#define IMFUP_27_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD2I2_ENABLED 
+	#ifndef NVIC_141_ENABLED
+		#define NVIC_141_ENABLED
+	#endif
+	#ifndef IMFUP_27_ENABLED
+		#define IMFUP_27_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD2I4_ENABLED 
+	#ifndef NVIC_141_ENABLED
+		#define NVIC_141_ENABLED
+	#endif
+	#ifndef IMFUP_27_ENABLED
+		#define IMFUP_27_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD2I6_ENABLED 
+	#ifndef NVIC_141_ENABLED
+		#define NVIC_141_ENABLED
+	#endif
+	#ifndef IMFUP_27_ENABLED
+		#define IMFUP_27_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD2I8_ENABLED 
+	#ifndef NVIC_141_ENABLED
+		#define NVIC_141_ENABLED
+	#endif
+	#ifndef IMFUP_27_ENABLED
+		#define IMFUP_27_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD2I10_ENABLED 
+	#ifndef NVIC_141_ENABLED
+		#define NVIC_141_ENABLED
+	#endif
+	#ifndef IMFUP_27_ENABLED
+		#define IMFUP_27_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD2I12_ENABLED 
+	#ifndef NVIC_141_ENABLED
+		#define NVIC_141_ENABLED
+	#endif
+	#ifndef IMFUP_27_ENABLED
+		#define IMFUP_27_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD2I14_ENABLED 
+	#ifndef NVIC_141_ENABLED
+		#define NVIC_141_ENABLED
+	#endif
+	#ifndef IMFUP_27_ENABLED
+		#define IMFUP_27_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD2I1_ENABLED 
+	#ifndef NVIC_142_ENABLED
+		#define NVIC_142_ENABLED
+	#endif
+	#ifndef IMFUP_28_ENABLED
+		#define IMFUP_28_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD2I3_ENABLED 
+	#ifndef NVIC_142_ENABLED
+		#define NVIC_142_ENABLED
+	#endif
+	#ifndef IMFUP_28_ENABLED
+		#define IMFUP_28_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD2I5_ENABLED 
+	#ifndef NVIC_142_ENABLED
+		#define NVIC_142_ENABLED
+	#endif
+	#ifndef IMFUP_28_ENABLED
+		#define IMFUP_28_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD2I7_ENABLED 
+	#ifndef NVIC_142_ENABLED
+		#define NVIC_142_ENABLED
+	#endif
+	#ifndef IMFUP_28_ENABLED
+		#define IMFUP_28_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD2I9_ENABLED 
+	#ifndef NVIC_142_ENABLED
+		#define NVIC_142_ENABLED
+	#endif
+	#ifndef IMFUP_28_ENABLED
+		#define IMFUP_28_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD2I11_ENABLED 
+	#ifndef NVIC_142_ENABLED
+		#define NVIC_142_ENABLED
+	#endif
+	#ifndef IMFUP_28_ENABLED
+		#define IMFUP_28_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD2I13_ENABLED 
+	#ifndef NVIC_142_ENABLED
+		#define NVIC_142_ENABLED
+	#endif
+	#ifndef IMFUP_28_ENABLED
+		#define IMFUP_28_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTTAUD2I15_ENABLED 
+	#ifndef NVIC_142_ENABLED
+		#define NVIC_142_ENABLED
+	#endif
+	#ifndef IMFUP_28_ENABLED
+		#define IMFUP_28_ENABLED
+	#endif
+#endif
+#ifdef ISR_IRQ7_ENABLED 
+	#ifndef NVIC_143_ENABLED
+		#define NVIC_143_ENABLED
+	#endif
+#endif
+#ifdef ISR_IRQ9_ENABLED 
+	#ifndef NVIC_144_ENABLED
+		#define NVIC_144_ENABLED
+	#endif
+#endif
+#ifdef ISR_IRQ10_ENABLED 
+	#ifndef NVIC_145_ENABLED
+		#define NVIC_145_ENABLED
+	#endif
+#endif
+#ifdef ISR_IRQ11_ENABLED 
+	#ifndef NVIC_146_ENABLED
+		#define NVIC_146_ENABLED
+	#endif
+#endif
+#ifdef ISR_IRQ12_ENABLED 
+	#ifndef NVIC_147_ENABLED
+		#define NVIC_147_ENABLED
+	#endif
+#endif
+#ifdef ISR_IRQ13_ENABLED 
+	#ifndef NVIC_148_ENABLED
+		#define NVIC_148_ENABLED
+	#endif
+#endif
+#ifdef ISR_IRQ14_ENABLED 
+	#ifndef NVIC_149_ENABLED
+		#define NVIC_149_ENABLED
+	#endif
+#endif
+#ifdef ISR_IRQ15_ENABLED 
+	#ifndef NVIC_150_ENABLED
+		#define NVIC_150_ENABLED
+	#endif
+#endif
+#ifdef ISR_IRQ17_ENABLED 
+	#ifndef NVIC_151_ENABLED
+		#define NVIC_151_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTADCK1ERR_ENABLED 
+	#ifndef NVIC_152_ENABLED
+		#define NVIC_152_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTADCK1I0_ENABLED 
+	#ifndef NVIC_153_ENABLED
+		#define NVIC_153_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTADCK1I1_ENABLED 
+	#ifndef NVIC_154_ENABLED
+		#define NVIC_154_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTADCK1I2_ENABLED 
+	#ifndef NVIC_155_ENABLED
+		#define NVIC_155_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTADCK1I3_ENABLED 
+	#ifndef NVIC_156_ENABLED
+		#define NVIC_156_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTADCK1I4_ENABLED 
+	#ifndef NVIC_157_ENABLED
+		#define NVIC_157_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTADCK1MPX_ENABLED 
+	#ifndef NVIC_158_ENABLED
+		#define NVIC_158_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTADCK1SD_ENABLED 
+	#ifndef NVIC_159_ENABLED
+		#define NVIC_159_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN38_ENABLED 
+	#ifndef NVIC_160_ENABLED
+		#define NVIC_160_ENABLED
+	#endif
+	#ifndef IMFUP_29_ENABLED
+		#define IMFUP_29_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN39_ENABLED 
+	#ifndef NVIC_160_ENABLED
+		#define NVIC_160_ENABLED
+	#endif
+	#ifndef IMFUP_29_ENABLED
+		#define IMFUP_29_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN310_ENABLED 
+	#ifndef NVIC_160_ENABLED
+		#define NVIC_160_ENABLED
+	#endif
+	#ifndef IMFUP_29_ENABLED
+		#define IMFUP_29_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN311_ENABLED 
+	#ifndef NVIC_160_ENABLED
+		#define NVIC_160_ENABLED
+	#endif
+	#ifndef IMFUP_29_ENABLED
+		#define IMFUP_29_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN312_ENABLED 
+	#ifndef NVIC_160_ENABLED
+		#define NVIC_160_ENABLED
+	#endif
+	#ifndef IMFUP_29_ENABLED
+		#define IMFUP_29_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN313_ENABLED 
+	#ifndef NVIC_160_ENABLED
+		#define NVIC_160_ENABLED
+	#endif
+	#ifndef IMFUP_29_ENABLED
+		#define IMFUP_29_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN314_ENABLED 
+	#ifndef NVIC_160_ENABLED
+		#define NVIC_160_ENABLED
+	#endif
+	#ifndef IMFUP_29_ENABLED
+		#define IMFUP_29_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN315_ENABLED 
+	#ifndef NVIC_160_ENABLED
+		#define NVIC_160_ENABLED
+	#endif
+	#ifndef IMFUP_29_ENABLED
+		#define IMFUP_29_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN38UR0_ENABLED 
+	#ifndef NVIC_161_ENABLED
+		#define NVIC_161_ENABLED
+	#endif
+	#ifndef IMFUP_30_ENABLED
+		#define IMFUP_30_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN39UR0_ENABLED 
+	#ifndef NVIC_161_ENABLED
+		#define NVIC_161_ENABLED
+	#endif
+	#ifndef IMFUP_30_ENABLED
+		#define IMFUP_30_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN310UR0_ENABLED 
+	#ifndef NVIC_161_ENABLED
+		#define NVIC_161_ENABLED
+	#endif
+	#ifndef IMFUP_30_ENABLED
+		#define IMFUP_30_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN311UR0_ENABLED 
+	#ifndef NVIC_161_ENABLED
+		#define NVIC_161_ENABLED
+	#endif
+	#ifndef IMFUP_30_ENABLED
+		#define IMFUP_30_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN312UR0_ENABLED 
+	#ifndef NVIC_161_ENABLED
+		#define NVIC_161_ENABLED
+	#endif
+	#ifndef IMFUP_30_ENABLED
+		#define IMFUP_30_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN313UR0_ENABLED 
+	#ifndef NVIC_161_ENABLED
+		#define NVIC_161_ENABLED
+	#endif
+	#ifndef IMFUP_30_ENABLED
+		#define IMFUP_30_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN314UR0_ENABLED 
+	#ifndef NVIC_161_ENABLED
+		#define NVIC_161_ENABLED
+	#endif
+	#ifndef IMFUP_30_ENABLED
+		#define IMFUP_30_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN315UR0_ENABLED 
+	#ifndef NVIC_161_ENABLED
+		#define NVIC_161_ENABLED
+	#endif
+	#ifndef IMFUP_30_ENABLED
+		#define IMFUP_30_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN38UR1_ENABLED 
+	#ifndef NVIC_162_ENABLED
+		#define NVIC_162_ENABLED
+	#endif
+	#ifndef IMFUP_31_ENABLED
+		#define IMFUP_31_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN39UR1_ENABLED 
+	#ifndef NVIC_162_ENABLED
+		#define NVIC_162_ENABLED
+	#endif
+	#ifndef IMFUP_31_ENABLED
+		#define IMFUP_31_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN310UR1_ENABLED 
+	#ifndef NVIC_162_ENABLED
+		#define NVIC_162_ENABLED
+	#endif
+	#ifndef IMFUP_31_ENABLED
+		#define IMFUP_31_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN311UR1_ENABLED 
+	#ifndef NVIC_162_ENABLED
+		#define NVIC_162_ENABLED
+	#endif
+	#ifndef IMFUP_31_ENABLED
+		#define IMFUP_31_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN312UR1_ENABLED 
+	#ifndef NVIC_162_ENABLED
+		#define NVIC_162_ENABLED
+	#endif
+	#ifndef IMFUP_31_ENABLED
+		#define IMFUP_31_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN313UR1_ENABLED 
+	#ifndef NVIC_162_ENABLED
+		#define NVIC_162_ENABLED
+	#endif
+	#ifndef IMFUP_31_ENABLED
+		#define IMFUP_31_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN314UR1_ENABLED 
+	#ifndef NVIC_162_ENABLED
+		#define NVIC_162_ENABLED
+	#endif
+	#ifndef IMFUP_31_ENABLED
+		#define IMFUP_31_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN315UR1_ENABLED 
+	#ifndef NVIC_162_ENABLED
+		#define NVIC_162_ENABLED
+	#endif
+	#ifndef IMFUP_31_ENABLED
+		#define IMFUP_31_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN38UR2_ENABLED 
+	#ifndef NVIC_163_ENABLED
+		#define NVIC_163_ENABLED
+	#endif
+	#ifndef IMFUP_32_ENABLED
+		#define IMFUP_32_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN39UR2_ENABLED 
+	#ifndef NVIC_163_ENABLED
+		#define NVIC_163_ENABLED
+	#endif
+	#ifndef IMFUP_32_ENABLED
+		#define IMFUP_32_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN310UR2_ENABLED 
+	#ifndef NVIC_163_ENABLED
+		#define NVIC_163_ENABLED
+	#endif
+	#ifndef IMFUP_32_ENABLED
+		#define IMFUP_32_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN311UR2_ENABLED 
+	#ifndef NVIC_163_ENABLED
+		#define NVIC_163_ENABLED
+	#endif
+	#ifndef IMFUP_32_ENABLED
+		#define IMFUP_32_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN312UR2_ENABLED 
+	#ifndef NVIC_163_ENABLED
+		#define NVIC_163_ENABLED
+	#endif
+	#ifndef IMFUP_32_ENABLED
+		#define IMFUP_32_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN313UR2_ENABLED 
+	#ifndef NVIC_163_ENABLED
+		#define NVIC_163_ENABLED
+	#endif
+	#ifndef IMFUP_32_ENABLED
+		#define IMFUP_32_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN314UR2_ENABLED 
+	#ifndef NVIC_163_ENABLED
+		#define NVIC_163_ENABLED
+	#endif
+	#ifndef IMFUP_32_ENABLED
+		#define IMFUP_32_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN315UR2_ENABLED 
+	#ifndef NVIC_163_ENABLED
+		#define NVIC_163_ENABLED
+	#endif
+	#ifndef IMFUP_32_ENABLED
+		#define IMFUP_32_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTOSTM1TINT_ENABLED 
+	#ifndef NVIC_164_ENABLED
+		#define NVIC_164_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTOSTM2TINT_ENABLED 
+	#ifndef NVIC_165_ENABLED
+		#define NVIC_165_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTETNF0DATA_ENABLED 
+	#ifndef NVIC_166_ENABLED
+		#define NVIC_166_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTETNF0ERR_ENABLED 
+	#ifndef NVIC_167_ENABLED
+		#define NVIC_167_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTETNF0MNG_ENABLED 
+	#ifndef NVIC_168_ENABLED
+		#define NVIC_168_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTETNF0MAC_ENABLED 
+	#ifndef NVIC_169_ENABLED
+		#define NVIC_169_ENABLED
+	#endif
+#endif
+#ifdef ISR_IRQ8_ENABLED 
+	#ifndef NVIC_170_ENABLED
+		#define NVIC_170_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTPSI50SI_ENABLED 
+	#ifndef NVIC_171_ENABLED
+		#define NVIC_171_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTPSI50RI_ENABLED 
+	#ifndef NVIC_172_ENABLED
+		#define NVIC_172_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTPSI50TI_ENABLED 
+	#ifndef NVIC_173_ENABLED
+		#define NVIC_173_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTPSI51SI_ENABLED 
+	#ifndef NVIC_174_ENABLED
+		#define NVIC_174_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTPSI51RI_ENABLED 
+	#ifndef NVIC_175_ENABLED
+		#define NVIC_175_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTPSI51TI_ENABLED 
+	#ifndef NVIC_176_ENABLED
+		#define NVIC_176_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTPSI5W_ENABLED 
+	#ifndef NVIC_177_ENABLED
+		#define NVIC_177_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTMMCA0_ENABLED 
+	#ifndef NVIC_178_ENABLED
+		#define NVIC_178_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTOSTM3TINT_ENABLED 
+	#ifndef NVIC_179_ENABLED
+		#define NVIC_179_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTOSTM4TINT_ENABLED 
+	#ifndef NVIC_180_ENABLED
+		#define NVIC_180_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTXCAN1FUNC_ENABLED 
+	#ifndef NVIC_181_ENABLED
+		#define NVIC_181_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTXCAN1ERR_ENABLED 
+	#ifndef NVIC_182_ENABLED
+		#define NVIC_182_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTXCAN1SAFETY_ENABLED 
+	#ifndef NVIC_183_ENABLED
+		#define NVIC_183_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTETND00_ENABLED 
+	#ifndef NVIC_184_ENABLED
+		#define NVIC_184_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTETND01_ENABLED 
+	#ifndef NVIC_185_ENABLED
+		#define NVIC_185_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTETND02_ENABLED 
+	#ifndef NVIC_186_ENABLED
+		#define NVIC_186_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTETND03_ENABLED 
+	#ifndef NVIC_187_ENABLED
+		#define NVIC_187_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTETND04_ENABLED 
+	#ifndef NVIC_188_ENABLED
+		#define NVIC_188_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTETND05_ENABLED 
+	#ifndef NVIC_189_ENABLED
+		#define NVIC_189_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTETND06_ENABLED 
+	#ifndef NVIC_190_ENABLED
+		#define NVIC_190_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTGPTP_ENABLED 
+	#ifndef NVIC_191_ENABLED
+		#define NVIC_191_ENABLED
+	#endif
+#endif
+#ifdef ISR_IRQ25_ENABLED 
+	#ifndef NVIC_192_ENABLED
+		#define NVIC_192_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN316_ENABLED 
+	#ifndef NVIC_193_ENABLED
+		#define NVIC_193_ENABLED
+	#endif
+	#ifndef IMFUP_33_ENABLED
+		#define IMFUP_33_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN317_ENABLED 
+	#ifndef NVIC_193_ENABLED
+		#define NVIC_193_ENABLED
+	#endif
+	#ifndef IMFUP_33_ENABLED
+		#define IMFUP_33_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN316UR0_ENABLED 
+	#ifndef NVIC_194_ENABLED
+		#define NVIC_194_ENABLED
+	#endif
+	#ifndef IMFUP_34_ENABLED
+		#define IMFUP_34_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN317UR0_ENABLED 
+	#ifndef NVIC_194_ENABLED
+		#define NVIC_194_ENABLED
+	#endif
+	#ifndef IMFUP_34_ENABLED
+		#define IMFUP_34_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN316UR1_ENABLED 
+	#ifndef NVIC_195_ENABLED
+		#define NVIC_195_ENABLED
+	#endif
+	#ifndef IMFUP_35_ENABLED
+		#define IMFUP_35_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN317UR1_ENABLED 
+	#ifndef NVIC_195_ENABLED
+		#define NVIC_195_ENABLED
+	#endif
+	#ifndef IMFUP_35_ENABLED
+		#define IMFUP_35_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN316UR2_ENABLED 
+	#ifndef NVIC_196_ENABLED
+		#define NVIC_196_ENABLED
+	#endif
+	#ifndef IMFUP_36_ENABLED
+		#define IMFUP_36_ENABLED
+	#endif
+#endif
+#ifdef ISR_INTRLIN317UR2_ENABLED 
+	#ifndef NVIC_196_ENABLED
+		#define NVIC_196_ENABLED
+	#endif
+	#ifndef IMFUP_36_ENABLED
+		#define IMFUP_36_ENABLED
+	#endif
+#endif
+extern void UNUSED_ISR(void);
+extern void UNMASK_ISR_INTECMNMI();
+extern void UNMASK_ISR_INTECMMI();
+extern void UNMASK_ISR_INTFPUEXCIRQ();
+extern void UNMASK_ISR_INTTAUD0I0();
+extern void UNMASK_ISR_INTTAUD0I2();
+extern void UNMASK_ISR_INTTAUD0I4();
+extern void UNMASK_ISR_INTTAUD0I6();
+extern void UNMASK_ISR_INTEINTSW0();
+extern void UNMASK_ISR_INTEINTSW1();
+extern void UNMASK_ISR_INTEINTSW2();
+extern void UNMASK_ISR_INTEINTSW3();
+extern void UNMASK_ISR_INTS2HS0();
+extern void UNMASK_ISR_INTWDTB0TIT();
+extern void UNMASK_ISR_INTTAUD0I8();
+extern void UNMASK_ISR_INTTAUD0I10();
+extern void UNMASK_ISR_INTTAUD0I12();
+extern void UNMASK_ISR_INTTAUD0I14();
+extern void UNMASK_ISR_INTTAPA0IPEK0();
+extern void UNMASK_ISR_INTTAPA0IVLY0();
+extern void UNMASK_ISR_INTPDMACERR();
+extern void UNMASK_ISR_INTDTSERR();
+extern void UNMASK_ISR_INTDCUDEGRADPE();
+extern void UNMASK_ISR_INTFL0ENDNM();
+extern void UNMASK_ISR_INTFL2ENDNM();
+extern void UNMASK_ISR_INTDTS7TO0();
+extern void UNMASK_ISR_INTDTSCT7TO0();
+extern void UNMASK_ISR_INTPDMAC0CH0();
+extern void UNMASK_ISR_INTPDMAC0CH2();
+extern void UNMASK_ISR_INTPDMAC0CH4();
+extern void UNMASK_ISR_INTPDMAC0CH6();
+extern void UNMASK_ISR_INTPDMAC0CH1();
+extern void UNMASK_ISR_INTPDMAC0CH3();
+extern void UNMASK_ISR_INTPDMAC0CH5();
+extern void UNMASK_ISR_INTPDMAC0CH7();
+extern void UNMASK_ISR_INTOSTM0TINT();
+extern void UNMASK_ISR_INTADCK0ERR();
+extern void UNMASK_ISR_INTADCK0I0();
+extern void UNMASK_ISR_INTADCK0I1();
+extern void UNMASK_ISR_INTADCK0I2();
+extern void UNMASK_ISR_INTADCK0I3();
+extern void UNMASK_ISR_INTADCK0I4();
+extern void UNMASK_ISR_INTADCK0MPX();
+extern void UNMASK_ISR_INTADCK0SD();
+extern void UNMASK_ISR_INTCSIH0IC();
+extern void UNMASK_ISR_INTCSIH2IC();
+extern void UNMASK_ISR_INTCSIH4IC();
+extern void UNMASK_ISR_INTCSIH6IC();
+extern void UNMASK_ISR_INTCSIH1IC();
+extern void UNMASK_ISR_INTCSIH3IC();
+extern void UNMASK_ISR_INTCSIH5IC();
+extern void UNMASK_ISR_INTCSIH7IC();
+extern void UNMASK_ISR_INTCSIH0IR();
+extern void UNMASK_ISR_INTCSIH2IR();
+extern void UNMASK_ISR_INTCSIH4IR();
+extern void UNMASK_ISR_INTCSIH6IR();
+extern void UNMASK_ISR_INTCSIH1IR();
+extern void UNMASK_ISR_INTCSIH3IR();
+extern void UNMASK_ISR_INTCSIH5IR();
+extern void UNMASK_ISR_INTCSIH7IR();
+extern void UNMASK_ISR_INTCSIH0IRE();
+extern void UNMASK_ISR_INTCSIH2IRE();
+extern void UNMASK_ISR_INTCSIH4IRE();
+extern void UNMASK_ISR_INTCSIH6IRE();
+extern void UNMASK_ISR_INTCSIH1IRE();
+extern void UNMASK_ISR_INTCSIH3IRE();
+extern void UNMASK_ISR_INTCSIH5IRE();
+extern void UNMASK_ISR_INTCSIH7IRE();
+extern void UNMASK_ISR_INTCSIH0IJC();
+extern void UNMASK_ISR_INTCSIH2IJC();
+extern void UNMASK_ISR_INTCSIH4IJC();
+extern void UNMASK_ISR_INTCSIH6IJC();
+extern void UNMASK_ISR_INTCSIH1IJC();
+extern void UNMASK_ISR_INTCSIH3IJC();
+extern void UNMASK_ISR_INTCSIH5IJC();
+extern void UNMASK_ISR_INTCSIH7IJC();
+extern void UNMASK_ISR_INTRCANGERR0();
+extern void UNMASK_ISR_INTRCANGRECC0();
+extern void UNMASK_ISR_INTRCAN0ERR();
+extern void UNMASK_ISR_INTRCAN2ERR();
+extern void UNMASK_ISR_INTRCAN4ERR();
+extern void UNMASK_ISR_INTRCAN1ERR();
+extern void UNMASK_ISR_INTRCAN3ERR();
+extern void UNMASK_ISR_INTRCAN5ERR();
+extern void UNMASK_ISR_INTRCAN0REC();
+extern void UNMASK_ISR_INTRCAN2REC();
+extern void UNMASK_ISR_INTRCAN4REC();
+extern void UNMASK_ISR_INTRCAN1REC();
+extern void UNMASK_ISR_INTRCAN3REC();
+extern void UNMASK_ISR_INTRCAN5REC();
+extern void UNMASK_ISR_INTRCAN0TRX();
+extern void UNMASK_ISR_INTRCAN2TRX();
+extern void UNMASK_ISR_INTRCAN4TRX();
+extern void UNMASK_ISR_INTRCAN1TRX();
+extern void UNMASK_ISR_INTRCAN3TRX();
+extern void UNMASK_ISR_INTRCAN5TRX();
+extern void UNMASK_ISR_INTXCAN0FUNC();
+extern void UNMASK_ISR_INTXCAN0ERR();
+extern void UNMASK_ISR_INTXCAN0SAFETY();
+extern void UNMASK_ISR_INTTAUJ0I0();
+extern void UNMASK_ISR_INTTAUJ0I1();
+extern void UNMASK_ISR_INTTAUJ0I2();
+extern void UNMASK_ISR_INTTAUJ0I3();
+extern void UNMASK_ISR_INTTAUJ1I0();
+extern void UNMASK_ISR_INTTAUJ1I1();
+extern void UNMASK_ISR_INTTAUJ1I2();
+extern void UNMASK_ISR_INTTAUJ1I3();
+extern void UNMASK_ISR_INTTAUJ2I0();
+extern void UNMASK_ISR_INTTAUJ2I1();
+extern void UNMASK_ISR_INTTAUJ2I2();
+extern void UNMASK_ISR_INTTAUJ2I3();
+extern void UNMASK_ISR_INTTAUJ3I0();
+extern void UNMASK_ISR_INTTAUJ3I1();
+extern void UNMASK_ISR_INTTAUJ3I2();
+extern void UNMASK_ISR_INTTAUJ3I3();
+extern void UNMASK_ISR_INTTAUD0I1();
+extern void UNMASK_ISR_INTTAUD0I3();
+extern void UNMASK_ISR_INTTAUD0I5();
+extern void UNMASK_ISR_INTTAUD0I7();
+extern void UNMASK_ISR_INTTAUD0I9();
+extern void UNMASK_ISR_INTTAUD0I11();
+extern void UNMASK_ISR_INTTAUD0I13();
+extern void UNMASK_ISR_INTTAUD0I15();
+extern void UNMASK_ISR_INTTAUD1I0();
+extern void UNMASK_ISR_INTTAUD1I2();
+extern void UNMASK_ISR_INTTAUD1I4();
+extern void UNMASK_ISR_INTTAUD1I6();
+extern void UNMASK_ISR_INTTAUD1I8();
+extern void UNMASK_ISR_INTTAUD1I10();
+extern void UNMASK_ISR_INTTAUD1I12();
+extern void UNMASK_ISR_INTTAUD1I14();
+extern void UNMASK_ISR_INTTAUD1I1();
+extern void UNMASK_ISR_INTTAUD1I3();
+extern void UNMASK_ISR_INTTAUD1I5();
+extern void UNMASK_ISR_INTTAUD1I7();
+extern void UNMASK_ISR_INTTAUD1I9();
+extern void UNMASK_ISR_INTTAUD1I11();
+extern void UNMASK_ISR_INTTAUD1I13();
+extern void UNMASK_ISR_INTTAUD1I15();
+extern void UNMASK_ISR_INTRLIN30();
+extern void UNMASK_ISR_INTRLIN31();
+extern void UNMASK_ISR_INTRLIN32();
+extern void UNMASK_ISR_INTRLIN33();
+extern void UNMASK_ISR_INTRLIN34();
+extern void UNMASK_ISR_INTRLIN35();
+extern void UNMASK_ISR_INTRLIN36();
+extern void UNMASK_ISR_INTRLIN37();
+extern void UNMASK_ISR_INTRLIN30UR0();
+extern void UNMASK_ISR_INTRLIN31UR0();
+extern void UNMASK_ISR_INTRLIN32UR0();
+extern void UNMASK_ISR_INTRLIN33UR0();
+extern void UNMASK_ISR_INTRLIN34UR0();
+extern void UNMASK_ISR_INTRLIN35UR0();
+extern void UNMASK_ISR_INTRLIN36UR0();
+extern void UNMASK_ISR_INTRLIN37UR0();
+extern void UNMASK_ISR_INTRLIN30UR1();
+extern void UNMASK_ISR_INTRLIN31UR1();
+extern void UNMASK_ISR_INTRLIN32UR1();
+extern void UNMASK_ISR_INTRLIN33UR1();
+extern void UNMASK_ISR_INTRLIN34UR1();
+extern void UNMASK_ISR_INTRLIN35UR1();
+extern void UNMASK_ISR_INTRLIN36UR1();
+extern void UNMASK_ISR_INTRLIN37UR1();
+extern void UNMASK_ISR_INTRLIN30UR2();
+extern void UNMASK_ISR_INTRLIN31UR2();
+extern void UNMASK_ISR_INTRLIN32UR2();
+extern void UNMASK_ISR_INTRLIN33UR2();
+extern void UNMASK_ISR_INTRLIN34UR2();
+extern void UNMASK_ISR_INTRLIN35UR2();
+extern void UNMASK_ISR_INTRLIN36UR2();
+extern void UNMASK_ISR_INTRLIN37UR2();
+extern void UNMASK_ISR_INTRSENT0RI();
+extern void UNMASK_ISR_INTRSENT2RI();
+extern void UNMASK_ISR_INTRSENT4RI();
+extern void UNMASK_ISR_INTRSENT6RI();
+extern void UNMASK_ISR_INTRSENT1RI();
+extern void UNMASK_ISR_INTRSENT3RI();
+extern void UNMASK_ISR_INTRSENT5RI();
+extern void UNMASK_ISR_INTRSENT7RI();
+extern void UNMASK_ISR_INTRSENT0SI();
+extern void UNMASK_ISR_INTRSENT2SI();
+extern void UNMASK_ISR_INTRSENT4SI();
+extern void UNMASK_ISR_INTRSENT6SI();
+extern void UNMASK_ISR_INTRSENT1SI();
+extern void UNMASK_ISR_INTRSENT3SI();
+extern void UNMASK_ISR_INTRSENT5SI();
+extern void UNMASK_ISR_INTRSENT7SI();
+extern void UNMASK_ISR_INTENCA0IOV();
+extern void UNMASK_ISR_INTENCA0I0();
+extern void UNMASK_ISR_INTENCA0I1();
+extern void UNMASK_ISR_INTENCA0IUD();
+extern void UNMASK_ISR_INTENCA0IEC();
+extern void UNMASK_ISR_IRQ0();
+extern void UNMASK_ISR_IRQ1();
+extern void UNMASK_ISR_IRQ2();
+extern void UNMASK_ISR_IRQ3();
+extern void UNMASK_ISR_IRQ4();
+extern void UNMASK_ISR_IRQ5();
+extern void UNMASK_ISR_IRQ6();
+extern void UNMASK_ISR_IRQ16();
+extern void UNMASK_ISR_IRQ18();
+extern void UNMASK_ISR_IRQ19();
+extern void UNMASK_ISR_IRQ20();
+extern void UNMASK_ISR_IRQ21();
+extern void UNMASK_ISR_IRQ22();
+extern void UNMASK_ISR_IRQ23();
+extern void UNMASK_ISR_IRQ24();
+extern void UNMASK_ISR_INTRTCA01S();
+extern void UNMASK_ISR_INTRTCA0AL();
+extern void UNMASK_ISR_INTRTCA0R();
+extern void UNMASK_ISR_INTS2H0(void);
+extern void UNMASK_ISR_INTPWGCG00();
+extern void UNMASK_ISR_INTPWGCG01();
+extern void UNMASK_ISR_INTPWGCG02();
+extern void UNMASK_ISR_INTPWSDQFULL();
+extern void UNMASK_ISR_INTCXP10TI();
+extern void UNMASK_ISR_INTCXP12TI();
+extern void UNMASK_ISR_INTCXP10RI();
+extern void UNMASK_ISR_INTCXP12RI();
+extern void UNMASK_ISR_INTCXP10SI();
+extern void UNMASK_ISR_INTCXP12SI();
+extern void UNMASK_ISR_INTCXP11TI();
+extern void UNMASK_ISR_INTCXP13TI();
+extern void UNMASK_ISR_INTCXP11RI();
+extern void UNMASK_ISR_INTCXP13RI();
+extern void UNMASK_ISR_INTCXP11SI();
+extern void UNMASK_ISR_INTCXP13SI();
+extern void UNMASK_ISR_INTRI3C0RESP();
+extern void UNMASK_ISR_INTRI3C0CMD();
+extern void UNMASK_ISR_INTRI3C0IBI();
+extern void UNMASK_ISR_INTRI3C0RX0();
+extern void UNMASK_ISR_INTRI3C0TX0();
+extern void UNMASK_ISR_INTRI3C0RCV();
+extern void UNMASK_ISR_INTRI3C0HRESP();
+extern void UNMASK_ISR_INTRI3C0HCMD();
+extern void UNMASK_ISR_INTRI3C0HRX();
+extern void UNMASK_ISR_INTRI3C0HTX();
+extern void UNMASK_ISR_INTRI3C0TEND();
+extern void UNMASK_ISR_INTRI3C0EEI();
+extern void UNMASK_ISR_INTRIIC0EE();
+extern void UNMASK_ISR_INTRIIC0RI();
+extern void UNMASK_ISR_INTRIIC0TI();
+extern void UNMASK_ISR_INTRIIC0TEI();
+extern void UNMASK_ISR_INTRIIC1EE();
+extern void UNMASK_ISR_INTRIIC1RI();
+extern void UNMASK_ISR_INTRIIC1TI();
+extern void UNMASK_ISR_INTRIIC1TEI();
+extern void UNMASK_ISR_INTCWEND();
+extern void UNMASK_ISR_INTDPE();
+extern void UNMASK_ISR_INTLPSTM0();
+extern void UNMASK_ISR_INTLPSTM2();
+extern void UNMASK_ISR_INTLPSTM4();
+extern void UNMASK_ISR_INTLPSTM1();
+extern void UNMASK_ISR_INTLPSTM3();
+extern void UNMASK_ISR_INTRSIPMFATALERR();
+extern void UNMASK_ISR_INTWDTBATIT();
+extern void UNMASK_ISR_INTDCUTDI();
+extern void UNMASK_ISR_INTSSIF0TX();
+extern void UNMASK_ISR_INTSSIF0RX();
+extern void UNMASK_ISR_INTSSIF0();
+extern void UNMASK_ISR_INTSSIF1TX();
+extern void UNMASK_ISR_INTSSIF1RX();
+extern void UNMASK_ISR_INTSSIF1();
+extern void UNMASK_ISR_INTPDMAC1CH0();
+extern void UNMASK_ISR_INTPDMAC1CH2();
+extern void UNMASK_ISR_INTPDMAC1CH4();
+extern void UNMASK_ISR_INTPDMAC1CH6();
+extern void UNMASK_ISR_INTPDMAC1CH1();
+extern void UNMASK_ISR_INTPDMAC1CH3();
+extern void UNMASK_ISR_INTPDMAC1CH5();
+extern void UNMASK_ISR_INTPDMAC1CH7();
+extern void UNMASK_ISR_INTTAUD2I0();
+extern void UNMASK_ISR_INTTAUD2I2();
+extern void UNMASK_ISR_INTTAUD2I4();
+extern void UNMASK_ISR_INTTAUD2I6();
+extern void UNMASK_ISR_INTTAUD2I8();
+extern void UNMASK_ISR_INTTAUD2I10();
+extern void UNMASK_ISR_INTTAUD2I12();
+extern void UNMASK_ISR_INTTAUD2I14();
+extern void UNMASK_ISR_INTTAUD2I1();
+extern void UNMASK_ISR_INTTAUD2I3();
+extern void UNMASK_ISR_INTTAUD2I5();
+extern void UNMASK_ISR_INTTAUD2I7();
+extern void UNMASK_ISR_INTTAUD2I9();
+extern void UNMASK_ISR_INTTAUD2I11();
+extern void UNMASK_ISR_INTTAUD2I13();
+extern void UNMASK_ISR_INTTAUD2I15();
+extern void UNMASK_ISR_IRQ7();
+extern void UNMASK_ISR_IRQ9();
+extern void UNMASK_ISR_IRQ10();
+extern void UNMASK_ISR_IRQ11();
+extern void UNMASK_ISR_IRQ12();
+extern void UNMASK_ISR_IRQ13();
+extern void UNMASK_ISR_IRQ14();
+extern void UNMASK_ISR_IRQ15();
+extern void UNMASK_ISR_IRQ17();
+extern void UNMASK_ISR_INTADCK1ERR();
+extern void UNMASK_ISR_INTADCK1I0();
+extern void UNMASK_ISR_INTADCK1I1();
+extern void UNMASK_ISR_INTADCK1I2();
+extern void UNMASK_ISR_INTADCK1I3();
+extern void UNMASK_ISR_INTADCK1I4();
+extern void UNMASK_ISR_INTADCK1MPX();
+extern void UNMASK_ISR_INTADCK1SD();
+extern void UNMASK_ISR_INTRLIN38();
+extern void UNMASK_ISR_INTRLIN39();
+extern void UNMASK_ISR_INTRLIN310();
+extern void UNMASK_ISR_INTRLIN311();
+extern void UNMASK_ISR_INTRLIN312();
+extern void UNMASK_ISR_INTRLIN313();
+extern void UNMASK_ISR_INTRLIN314();
+extern void UNMASK_ISR_INTRLIN315();
+extern void UNMASK_ISR_INTRLIN38UR0();
+extern void UNMASK_ISR_INTRLIN39UR0();
+extern void UNMASK_ISR_INTRLIN310UR0();
+extern void UNMASK_ISR_INTRLIN311UR0();
+extern void UNMASK_ISR_INTRLIN312UR0();
+extern void UNMASK_ISR_INTRLIN313UR0();
+extern void UNMASK_ISR_INTRLIN314UR0();
+extern void UNMASK_ISR_INTRLIN315UR0();
+extern void UNMASK_ISR_INTRLIN38UR1();
+extern void UNMASK_ISR_INTRLIN39UR1();
+extern void UNMASK_ISR_INTRLIN310UR1();
+extern void UNMASK_ISR_INTRLIN311UR1();
+extern void UNMASK_ISR_INTRLIN312UR1();
+extern void UNMASK_ISR_INTRLIN313UR1();
+extern void UNMASK_ISR_INTRLIN314UR1();
+extern void UNMASK_ISR_INTRLIN315UR1();
+extern void UNMASK_ISR_INTRLIN38UR2();
+extern void UNMASK_ISR_INTRLIN39UR2();
+extern void UNMASK_ISR_INTRLIN310UR2();
+extern void UNMASK_ISR_INTRLIN311UR2();
+extern void UNMASK_ISR_INTRLIN312UR2();
+extern void UNMASK_ISR_INTRLIN313UR2();
+extern void UNMASK_ISR_INTRLIN314UR2();
+extern void UNMASK_ISR_INTRLIN315UR2();
+extern void UNMASK_ISR_INTOSTM1TINT();
+extern void UNMASK_ISR_INTOSTM2TINT();
+extern void UNMASK_ISR_INTETNF0DATA();
+extern void UNMASK_ISR_INTETNF0ERR();
+extern void UNMASK_ISR_INTETNF0MNG();
+extern void UNMASK_ISR_INTETNF0MAC();
+extern void UNMASK_ISR_IRQ8();
+extern void UNMASK_ISR_INTPSI50SI();
+extern void UNMASK_ISR_INTPSI50RI();
+extern void UNMASK_ISR_INTPSI50TI();
+extern void UNMASK_ISR_INTPSI51SI();
+extern void UNMASK_ISR_INTPSI51RI();
+extern void UNMASK_ISR_INTPSI51TI();
+extern void UNMASK_ISR_INTPSI5W();
+extern void UNMASK_ISR_INTMMCA0();
+extern void UNMASK_ISR_INTOSTM3TINT();
+extern void UNMASK_ISR_INTOSTM4TINT();
+extern void UNMASK_ISR_INTXCAN1FUNC();
+extern void UNMASK_ISR_INTXCAN1ERR();
+extern void UNMASK_ISR_INTXCAN1SAFETY();
+extern void UNMASK_ISR_INTETND00();
+extern void UNMASK_ISR_INTETND01();
+extern void UNMASK_ISR_INTETND02();
+extern void UNMASK_ISR_INTETND03();
+extern void UNMASK_ISR_INTETND04();
+extern void UNMASK_ISR_INTETND05();
+extern void UNMASK_ISR_INTETND06();
+extern void UNMASK_ISR_INTGPTP();
+extern void UNMASK_ISR_IRQ25();
+extern void UNMASK_ISR_INTRLIN316();
+extern void UNMASK_ISR_INTRLIN317();
+extern void UNMASK_ISR_INTRLIN316UR0();
+extern void UNMASK_ISR_INTRLIN317UR0();
+extern void UNMASK_ISR_INTRLIN316UR1();
+extern void UNMASK_ISR_INTRLIN317UR1();
+extern void UNMASK_ISR_INTRLIN316UR2();
+extern void UNMASK_ISR_INTRLIN317UR2();
+#ifdef ISR_INTECMNMI_ENABLED 
+	extern void ISR_INTECMNMI();
+#endif
+#ifdef ISR_INTECMMI_ENABLED 
+	extern void ISR_INTECMMI();
+#endif
+#ifdef ISR_INTFPUEXCIRQ_ENABLED 
+	extern void ISR_INTFPUEXCIRQ();
+#endif
+#ifdef ISR_INTTAUD0I0_ENABLED 
+	extern void ISR_INTTAUD0I0();
+#endif
+#ifdef ISR_INTTAUD0I2_ENABLED 
+	extern void ISR_INTTAUD0I2();
+#endif
+#ifdef ISR_INTTAUD0I4_ENABLED 
+	extern void ISR_INTTAUD0I4();
+#endif
+#ifdef ISR_INTTAUD0I6_ENABLED 
+	extern void ISR_INTTAUD0I6();
+#endif
+#ifdef ISR_INTEINTSW0_ENABLED 
+	extern void ISR_INTEINTSW0();
+#endif
+#ifdef ISR_INTEINTSW1_ENABLED 
+	extern void ISR_INTEINTSW1();
+#endif
+#ifdef ISR_INTEINTSW2_ENABLED 
+	extern void ISR_INTEINTSW2();
+#endif
+#ifdef ISR_INTEINTSW3_ENABLED 
+	extern void ISR_INTEINTSW3();
+#endif
+#ifdef ISR_INTS2HS0_ENABLED 
+	extern void ISR_INTS2HS0();
+#endif
+#ifdef ISR_INTWDTB0TIT_ENABLED 
+	extern void ISR_INTWDTB0TIT();
+#endif
+#ifdef ISR_INTTAUD0I8_ENABLED 
+	extern void ISR_INTTAUD0I8();
+#endif
+#ifdef ISR_INTTAUD0I10_ENABLED 
+	extern void ISR_INTTAUD0I10();
+#endif
+#ifdef ISR_INTTAUD0I12_ENABLED 
+	extern void ISR_INTTAUD0I12();
+#endif
+#ifdef ISR_INTTAUD0I14_ENABLED 
+	extern void ISR_INTTAUD0I14();
+#endif
+#ifdef ISR_INTTAPA0IPEK0_ENABLED 
+	extern void ISR_INTTAPA0IPEK0();
+#endif
+#ifdef ISR_INTTAPA0IVLY0_ENABLED 
+	extern void ISR_INTTAPA0IVLY0();
+#endif
+#ifdef ISR_INTPDMACERR_ENABLED 
+	extern void ISR_INTPDMACERR();
+#endif
+#ifdef ISR_INTDTSERR_ENABLED 
+	extern void ISR_INTDTSERR();
+#endif
+#ifdef ISR_INTDCUDEGRADPE_ENABLED 
+	extern void ISR_INTDCUDEGRADPE();
+#endif
+#ifdef ISR_INTFL0ENDNM_ENABLED 
+	extern void ISR_INTFL0ENDNM();
+#endif
+#ifdef ISR_INTFL2ENDNM_ENABLED 
+	extern void ISR_INTFL2ENDNM();
+#endif
+#ifdef ISR_INTDTS7TO0_ENABLED 
+	extern void ISR_INTDTS7TO0();
+#endif
+#ifdef ISR_INTDTSCT7TO0_ENABLED 
+	extern void ISR_INTDTSCT7TO0();
+#endif
+#ifdef ISR_INTPDMAC0CH0_ENABLED 
+	extern void ISR_INTPDMAC0CH0();
+#endif
+#ifdef ISR_INTPDMAC0CH2_ENABLED 
+	extern void ISR_INTPDMAC0CH2();
+#endif
+#ifdef ISR_INTPDMAC0CH4_ENABLED 
+	extern void ISR_INTPDMAC0CH4();
+#endif
+#ifdef ISR_INTPDMAC0CH6_ENABLED 
+	extern void ISR_INTPDMAC0CH6();
+#endif
+#ifdef ISR_INTPDMAC0CH1_ENABLED 
+	extern void ISR_INTPDMAC0CH1();
+#endif
+#ifdef ISR_INTPDMAC0CH3_ENABLED 
+	extern void ISR_INTPDMAC0CH3();
+#endif
+#ifdef ISR_INTPDMAC0CH5_ENABLED 
+	extern void ISR_INTPDMAC0CH5();
+#endif
+#ifdef ISR_INTPDMAC0CH7_ENABLED 
+	extern void ISR_INTPDMAC0CH7();
+#endif
+#ifdef ISR_INTOSTM0TINT_ENABLED 
+	extern void ISR_INTOSTM0TINT();
+#endif
+#ifdef ISR_INTADCK0ERR_ENABLED 
+	extern void ISR_INTADCK0ERR();
+#endif
+#ifdef ISR_INTADCK0I0_ENABLED 
+	extern void ISR_INTADCK0I0();
+#endif
+#ifdef ISR_INTADCK0I1_ENABLED 
+	extern void ISR_INTADCK0I1();
+#endif
+#ifdef ISR_INTADCK0I2_ENABLED 
+	extern void ISR_INTADCK0I2();
+#endif
+#ifdef ISR_INTADCK0I3_ENABLED 
+	extern void ISR_INTADCK0I3();
+#endif
+#ifdef ISR_INTADCK0I4_ENABLED 
+	extern void ISR_INTADCK0I4();
+#endif
+#ifdef ISR_INTADCK0MPX_ENABLED 
+	extern void ISR_INTADCK0MPX();
+#endif
+#ifdef ISR_INTADCK0SD_ENABLED 
+	extern void ISR_INTADCK0SD();
+#endif
+#ifdef ISR_INTCSIH0IC_ENABLED 
+	extern void ISR_INTCSIH0IC();
+#endif
+#ifdef ISR_INTCSIH2IC_ENABLED 
+	extern void ISR_INTCSIH2IC();
+#endif
+#ifdef ISR_INTCSIH4IC_ENABLED 
+	extern void ISR_INTCSIH4IC();
+#endif
+#ifdef ISR_INTCSIH6IC_ENABLED 
+	extern void ISR_INTCSIH6IC();
+#endif
+#ifdef ISR_INTCSIH1IC_ENABLED 
+	extern void ISR_INTCSIH1IC();
+#endif
+#ifdef ISR_INTCSIH3IC_ENABLED 
+	extern void ISR_INTCSIH3IC();
+#endif
+#ifdef ISR_INTCSIH5IC_ENABLED 
+	extern void ISR_INTCSIH5IC();
+#endif
+#ifdef ISR_INTCSIH7IC_ENABLED 
+	extern void ISR_INTCSIH7IC();
+#endif
+#ifdef ISR_INTCSIH0IR_ENABLED 
+	extern void ISR_INTCSIH0IR();
+#endif
+#ifdef ISR_INTCSIH2IR_ENABLED 
+	extern void ISR_INTCSIH2IR();
+#endif
+#ifdef ISR_INTCSIH4IR_ENABLED 
+	extern void ISR_INTCSIH4IR();
+#endif
+#ifdef ISR_INTCSIH6IR_ENABLED 
+	extern void ISR_INTCSIH6IR();
+#endif
+#ifdef ISR_INTCSIH1IR_ENABLED 
+	extern void ISR_INTCSIH1IR();
+#endif
+#ifdef ISR_INTCSIH3IR_ENABLED 
+	extern void ISR_INTCSIH3IR();
+#endif
+#ifdef ISR_INTCSIH5IR_ENABLED 
+	extern void ISR_INTCSIH5IR();
+#endif
+#ifdef ISR_INTCSIH7IR_ENABLED 
+	extern void ISR_INTCSIH7IR();
+#endif
+#ifdef ISR_INTCSIH0IRE_ENABLED 
+	extern void ISR_INTCSIH0IRE();
+#endif
+#ifdef ISR_INTCSIH2IRE_ENABLED 
+	extern void ISR_INTCSIH2IRE();
+#endif
+#ifdef ISR_INTCSIH4IRE_ENABLED 
+	extern void ISR_INTCSIH4IRE();
+#endif
+#ifdef ISR_INTCSIH6IRE_ENABLED 
+	extern void ISR_INTCSIH6IRE();
+#endif
+#ifdef ISR_INTCSIH1IRE_ENABLED 
+	extern void ISR_INTCSIH1IRE();
+#endif
+#ifdef ISR_INTCSIH3IRE_ENABLED 
+	extern void ISR_INTCSIH3IRE();
+#endif
+#ifdef ISR_INTCSIH5IRE_ENABLED 
+	extern void ISR_INTCSIH5IRE();
+#endif
+#ifdef ISR_INTCSIH7IRE_ENABLED 
+	extern void ISR_INTCSIH7IRE();
+#endif
+#ifdef ISR_INTCSIH0IJC_ENABLED 
+	extern void ISR_INTCSIH0IJC();
+#endif
+#ifdef ISR_INTCSIH2IJC_ENABLED 
+	extern void ISR_INTCSIH2IJC();
+#endif
+#ifdef ISR_INTCSIH4IJC_ENABLED 
+	extern void ISR_INTCSIH4IJC();
+#endif
+#ifdef ISR_INTCSIH6IJC_ENABLED 
+	extern void ISR_INTCSIH6IJC();
+#endif
+#ifdef ISR_INTCSIH1IJC_ENABLED 
+	extern void ISR_INTCSIH1IJC();
+#endif
+#ifdef ISR_INTCSIH3IJC_ENABLED 
+	extern void ISR_INTCSIH3IJC();
+#endif
+#ifdef ISR_INTCSIH5IJC_ENABLED 
+	extern void ISR_INTCSIH5IJC();
+#endif
+#ifdef ISR_INTCSIH7IJC_ENABLED 
+	extern void ISR_INTCSIH7IJC();
+#endif
+#ifdef ISR_INTRCANGERR0_ENABLED 
+	extern void ISR_INTRCANGERR0();
+#endif
+#ifdef ISR_INTRCANGRECC0_ENABLED 
+	extern void ISR_INTRCANGRECC0();
+#endif
+#ifdef ISR_INTRCAN0ERR_ENABLED 
+	extern void ISR_INTRCAN0ERR();
+#endif
+#ifdef ISR_INTRCAN2ERR_ENABLED 
+	extern void ISR_INTRCAN2ERR();
+#endif
+#ifdef ISR_INTRCAN4ERR_ENABLED 
+	extern void ISR_INTRCAN4ERR();
+#endif
+#ifdef ISR_INTRCAN1ERR_ENABLED 
+	extern void ISR_INTRCAN1ERR();
+#endif
+#ifdef ISR_INTRCAN3ERR_ENABLED 
+	extern void ISR_INTRCAN3ERR();
+#endif
+#ifdef ISR_INTRCAN5ERR_ENABLED 
+	extern void ISR_INTRCAN5ERR();
+#endif
+#ifdef ISR_INTRCAN0REC_ENABLED 
+	extern void ISR_INTRCAN0REC();
+#endif
+#ifdef ISR_INTRCAN2REC_ENABLED 
+	extern void ISR_INTRCAN2REC();
+#endif
+#ifdef ISR_INTRCAN4REC_ENABLED 
+	extern void ISR_INTRCAN4REC();
+#endif
+#ifdef ISR_INTRCAN1REC_ENABLED 
+	extern void ISR_INTRCAN1REC();
+#endif
+#ifdef ISR_INTRCAN3REC_ENABLED 
+	extern void ISR_INTRCAN3REC();
+#endif
+#ifdef ISR_INTRCAN5REC_ENABLED 
+	extern void ISR_INTRCAN5REC();
+#endif
+#ifdef ISR_INTRCAN0TRX_ENABLED 
+	extern void ISR_INTRCAN0TRX();
+#endif
+#ifdef ISR_INTRCAN2TRX_ENABLED 
+	extern void ISR_INTRCAN2TRX();
+#endif
+#ifdef ISR_INTRCAN4TRX_ENABLED 
+	extern void ISR_INTRCAN4TRX();
+#endif
+#ifdef ISR_INTRCAN1TRX_ENABLED 
+	extern void ISR_INTRCAN1TRX();
+#endif
+#ifdef ISR_INTRCAN3TRX_ENABLED 
+	extern void ISR_INTRCAN3TRX();
+#endif
+#ifdef ISR_INTRCAN5TRX_ENABLED 
+	extern void ISR_INTRCAN5TRX();
+#endif
+#ifdef ISR_INTXCAN0FUNC_ENABLED 
+	extern void ISR_INTXCAN0FUNC();
+#endif
+#ifdef ISR_INTXCAN0ERR_ENABLED 
+	extern void ISR_INTXCAN0ERR();
+#endif
+#ifdef ISR_INTXCAN0SAFETY_ENABLED 
+	extern void ISR_INTXCAN0SAFETY();
+#endif
+#ifdef ISR_INTTAUJ0I0_ENABLED 
+	extern void ISR_INTTAUJ0I0();
+#endif
+#ifdef ISR_INTTAUJ0I1_ENABLED 
+	extern void ISR_INTTAUJ0I1();
+#endif
+#ifdef ISR_INTTAUJ0I2_ENABLED 
+	extern void ISR_INTTAUJ0I2();
+#endif
+#ifdef ISR_INTTAUJ0I3_ENABLED 
+	extern void ISR_INTTAUJ0I3();
+#endif
+#ifdef ISR_INTTAUJ1I0_ENABLED 
+	extern void ISR_INTTAUJ1I0();
+#endif
+#ifdef ISR_INTTAUJ1I1_ENABLED 
+	extern void ISR_INTTAUJ1I1();
+#endif
+#ifdef ISR_INTTAUJ1I2_ENABLED 
+	extern void ISR_INTTAUJ1I2();
+#endif
+#ifdef ISR_INTTAUJ1I3_ENABLED 
+	extern void ISR_INTTAUJ1I3();
+#endif
+#ifdef ISR_INTTAUJ2I0_ENABLED 
+	extern void ISR_INTTAUJ2I0();
+#endif
+#ifdef ISR_INTTAUJ2I1_ENABLED 
+	extern void ISR_INTTAUJ2I1();
+#endif
+#ifdef ISR_INTTAUJ2I2_ENABLED 
+	extern void ISR_INTTAUJ2I2();
+#endif
+#ifdef ISR_INTTAUJ2I3_ENABLED 
+	extern void ISR_INTTAUJ2I3();
+#endif
+#ifdef ISR_INTTAUJ3I0_ENABLED 
+	extern void ISR_INTTAUJ3I0();
+#endif
+#ifdef ISR_INTTAUJ3I1_ENABLED 
+	extern void ISR_INTTAUJ3I1();
+#endif
+#ifdef ISR_INTTAUJ3I2_ENABLED 
+	extern void ISR_INTTAUJ3I2();
+#endif
+#ifdef ISR_INTTAUJ3I3_ENABLED 
+	extern void ISR_INTTAUJ3I3();
+#endif
+#ifdef ISR_INTTAUD0I1_ENABLED 
+	extern void ISR_INTTAUD0I1();
+#endif
+#ifdef ISR_INTTAUD0I3_ENABLED 
+	extern void ISR_INTTAUD0I3();
+#endif
+#ifdef ISR_INTTAUD0I5_ENABLED 
+	extern void ISR_INTTAUD0I5();
+#endif
+#ifdef ISR_INTTAUD0I7_ENABLED 
+	extern void ISR_INTTAUD0I7();
+#endif
+#ifdef ISR_INTTAUD0I9_ENABLED 
+	extern void ISR_INTTAUD0I9();
+#endif
+#ifdef ISR_INTTAUD0I11_ENABLED 
+	extern void ISR_INTTAUD0I11();
+#endif
+#ifdef ISR_INTTAUD0I13_ENABLED 
+	extern void ISR_INTTAUD0I13();
+#endif
+#ifdef ISR_INTTAUD0I15_ENABLED 
+	extern void ISR_INTTAUD0I15();
+#endif
+#ifdef ISR_INTTAUD1I0_ENABLED 
+	extern void ISR_INTTAUD1I0();
+#endif
+#ifdef ISR_INTTAUD1I2_ENABLED 
+	extern void ISR_INTTAUD1I2();
+#endif
+#ifdef ISR_INTTAUD1I4_ENABLED 
+	extern void ISR_INTTAUD1I4();
+#endif
+#ifdef ISR_INTTAUD1I6_ENABLED 
+	extern void ISR_INTTAUD1I6();
+#endif
+#ifdef ISR_INTTAUD1I8_ENABLED 
+	extern void ISR_INTTAUD1I8();
+#endif
+#ifdef ISR_INTTAUD1I10_ENABLED 
+	extern void ISR_INTTAUD1I10();
+#endif
+#ifdef ISR_INTTAUD1I12_ENABLED 
+	extern void ISR_INTTAUD1I12();
+#endif
+#ifdef ISR_INTTAUD1I14_ENABLED 
+	extern void ISR_INTTAUD1I14();
+#endif
+#ifdef ISR_INTTAUD1I1_ENABLED 
+	extern void ISR_INTTAUD1I1();
+#endif
+#ifdef ISR_INTTAUD1I3_ENABLED 
+	extern void ISR_INTTAUD1I3();
+#endif
+#ifdef ISR_INTTAUD1I5_ENABLED 
+	extern void ISR_INTTAUD1I5();
+#endif
+#ifdef ISR_INTTAUD1I7_ENABLED 
+	extern void ISR_INTTAUD1I7();
+#endif
+#ifdef ISR_INTTAUD1I9_ENABLED 
+	extern void ISR_INTTAUD1I9();
+#endif
+#ifdef ISR_INTTAUD1I11_ENABLED 
+	extern void ISR_INTTAUD1I11();
+#endif
+#ifdef ISR_INTTAUD1I13_ENABLED 
+	extern void ISR_INTTAUD1I13();
+#endif
+#ifdef ISR_INTTAUD1I15_ENABLED 
+	extern void ISR_INTTAUD1I15();
+#endif
+#ifdef ISR_INTRLIN30_ENABLED 
+	extern void ISR_INTRLIN30();
+#endif
+#ifdef ISR_INTRLIN31_ENABLED 
+	extern void ISR_INTRLIN31();
+#endif
+#ifdef ISR_INTRLIN32_ENABLED 
+	extern void ISR_INTRLIN32();
+#endif
+#ifdef ISR_INTRLIN33_ENABLED 
+	extern void ISR_INTRLIN33();
+#endif
+#ifdef ISR_INTRLIN34_ENABLED 
+	extern void ISR_INTRLIN34();
+#endif
+#ifdef ISR_INTRLIN35_ENABLED 
+	extern void ISR_INTRLIN35();
+#endif
+#ifdef ISR_INTRLIN36_ENABLED 
+	extern void ISR_INTRLIN36();
+#endif
+#ifdef ISR_INTRLIN37_ENABLED 
+	extern void ISR_INTRLIN37();
+#endif
+#ifdef ISR_INTRLIN30UR0_ENABLED 
+	extern void ISR_INTRLIN30UR0();
+#endif
+#ifdef ISR_INTRLIN31UR0_ENABLED 
+	extern void ISR_INTRLIN31UR0();
+#endif
+#ifdef ISR_INTRLIN32UR0_ENABLED 
+	extern void ISR_INTRLIN32UR0();
+#endif
+#ifdef ISR_INTRLIN33UR0_ENABLED 
+	extern void ISR_INTRLIN33UR0();
+#endif
+#ifdef ISR_INTRLIN34UR0_ENABLED 
+	extern void ISR_INTRLIN34UR0();
+#endif
+#ifdef ISR_INTRLIN35UR0_ENABLED 
+	extern void ISR_INTRLIN35UR0();
+#endif
+#ifdef ISR_INTRLIN36UR0_ENABLED 
+	extern void ISR_INTRLIN36UR0();
+#endif
+#ifdef ISR_INTRLIN37UR0_ENABLED 
+	extern void ISR_INTRLIN37UR0();
+#endif
+#ifdef ISR_INTRLIN30UR1_ENABLED 
+	extern void ISR_INTRLIN30UR1();
+#endif
+#ifdef ISR_INTRLIN31UR1_ENABLED 
+	extern void ISR_INTRLIN31UR1();
+#endif
+#ifdef ISR_INTRLIN32UR1_ENABLED 
+	extern void ISR_INTRLIN32UR1();
+#endif
+#ifdef ISR_INTRLIN33UR1_ENABLED 
+	extern void ISR_INTRLIN33UR1();
+#endif
+#ifdef ISR_INTRLIN34UR1_ENABLED 
+	extern void ISR_INTRLIN34UR1();
+#endif
+#ifdef ISR_INTRLIN35UR1_ENABLED 
+	extern void ISR_INTRLIN35UR1();
+#endif
+#ifdef ISR_INTRLIN36UR1_ENABLED 
+	extern void ISR_INTRLIN36UR1();
+#endif
+#ifdef ISR_INTRLIN37UR1_ENABLED 
+	extern void ISR_INTRLIN37UR1();
+#endif
+#ifdef ISR_INTRLIN30UR2_ENABLED 
+	extern void ISR_INTRLIN30UR2();
+#endif
+#ifdef ISR_INTRLIN31UR2_ENABLED 
+	extern void ISR_INTRLIN31UR2();
+#endif
+#ifdef ISR_INTRLIN32UR2_ENABLED 
+	extern void ISR_INTRLIN32UR2();
+#endif
+#ifdef ISR_INTRLIN33UR2_ENABLED 
+	extern void ISR_INTRLIN33UR2();
+#endif
+#ifdef ISR_INTRLIN34UR2_ENABLED 
+	extern void ISR_INTRLIN34UR2();
+#endif
+#ifdef ISR_INTRLIN35UR2_ENABLED 
+	extern void ISR_INTRLIN35UR2();
+#endif
+#ifdef ISR_INTRLIN36UR2_ENABLED 
+	extern void ISR_INTRLIN36UR2();
+#endif
+#ifdef ISR_INTRLIN37UR2_ENABLED 
+	extern void ISR_INTRLIN37UR2();
+#endif
+#ifdef ISR_INTRSENT0RI_ENABLED 
+	extern void ISR_INTRSENT0RI();
+#endif
+#ifdef ISR_INTRSENT2RI_ENABLED 
+	extern void ISR_INTRSENT2RI();
+#endif
+#ifdef ISR_INTRSENT4RI_ENABLED 
+	extern void ISR_INTRSENT4RI();
+#endif
+#ifdef ISR_INTRSENT6RI_ENABLED 
+	extern void ISR_INTRSENT6RI();
+#endif
+#ifdef ISR_INTRSENT1RI_ENABLED 
+	extern void ISR_INTRSENT1RI();
+#endif
+#ifdef ISR_INTRSENT3RI_ENABLED 
+	extern void ISR_INTRSENT3RI();
+#endif
+#ifdef ISR_INTRSENT5RI_ENABLED 
+	extern void ISR_INTRSENT5RI();
+#endif
+#ifdef ISR_INTRSENT7RI_ENABLED 
+	extern void ISR_INTRSENT7RI();
+#endif
+#ifdef ISR_INTRSENT0SI_ENABLED 
+	extern void ISR_INTRSENT0SI();
+#endif
+#ifdef ISR_INTRSENT2SI_ENABLED 
+	extern void ISR_INTRSENT2SI();
+#endif
+#ifdef ISR_INTRSENT4SI_ENABLED 
+	extern void ISR_INTRSENT4SI();
+#endif
+#ifdef ISR_INTRSENT6SI_ENABLED 
+	extern void ISR_INTRSENT6SI();
+#endif
+#ifdef ISR_INTRSENT1SI_ENABLED 
+	extern void ISR_INTRSENT1SI();
+#endif
+#ifdef ISR_INTRSENT3SI_ENABLED 
+	extern void ISR_INTRSENT3SI();
+#endif
+#ifdef ISR_INTRSENT5SI_ENABLED 
+	extern void ISR_INTRSENT5SI();
+#endif
+#ifdef ISR_INTRSENT7SI_ENABLED 
+	extern void ISR_INTRSENT7SI();
+#endif
+#ifdef ISR_INTENCA0IOV_ENABLED 
+	extern void ISR_INTENCA0IOV();
+#endif
+#ifdef ISR_INTENCA0I0_ENABLED 
+	extern void ISR_INTENCA0I0();
+#endif
+#ifdef ISR_INTENCA0I1_ENABLED 
+	extern void ISR_INTENCA0I1();
+#endif
+#ifdef ISR_INTENCA0IUD_ENABLED 
+	extern void ISR_INTENCA0IUD();
+#endif
+#ifdef ISR_INTENCA0IEC_ENABLED 
+	extern void ISR_INTENCA0IEC();
+#endif
+#ifdef ISR_IRQ0_ENABLED 
+	extern void ISR_IRQ0();
+#endif
+#ifdef ISR_IRQ1_ENABLED 
+	extern void ISR_IRQ1();
+#endif
+#ifdef ISR_IRQ2_ENABLED 
+	extern void ISR_IRQ2();
+#endif
+#ifdef ISR_IRQ3_ENABLED 
+	extern void ISR_IRQ3();
+#endif
+#ifdef ISR_IRQ4_ENABLED 
+	extern void ISR_IRQ4();
+#endif
+#ifdef ISR_IRQ5_ENABLED 
+	extern void ISR_IRQ5();
+#endif
+#ifdef ISR_IRQ6_ENABLED 
+	extern void ISR_IRQ6();
+#endif
+#ifdef ISR_IRQ16_ENABLED 
+	extern void ISR_IRQ16();
+#endif
+#ifdef ISR_IRQ18_ENABLED 
+	extern void ISR_IRQ18();
+#endif
+#ifdef ISR_IRQ19_ENABLED 
+	extern void ISR_IRQ19();
+#endif
+#ifdef ISR_IRQ20_ENABLED 
+	extern void ISR_IRQ20();
+#endif
+#ifdef ISR_IRQ21_ENABLED 
+	extern void ISR_IRQ21();
+#endif
+#ifdef ISR_IRQ22_ENABLED 
+	extern void ISR_IRQ22();
+#endif
+#ifdef ISR_IRQ23_ENABLED 
+	extern void ISR_IRQ23();
+#endif
+#ifdef ISR_IRQ24_ENABLED 
+	extern void ISR_IRQ24();
+#endif
+#ifdef ISR_INTRTCA01S_ENABLED 
+	extern void ISR_INTRTCA01S();
+#endif
+#ifdef ISR_INTRTCA0AL_ENABLED 
+	extern void ISR_INTRTCA0AL();
+#endif
+#ifdef ISR_INTRTCA0R_ENABLED 
+	extern void ISR_INTRTCA0R();
+#endif
+#ifdef ISR_INTS2H0_ENABLED 
+	extern void ISR_INTS2H0(void);
+#endif
+#ifdef ISR_INTPWGCG00_ENABLED 
+	extern void ISR_INTPWGCG00();
+#endif
+#ifdef ISR_INTPWGCG01_ENABLED 
+	extern void ISR_INTPWGCG01();
+#endif
+#ifdef ISR_INTPWGCG02_ENABLED 
+	extern void ISR_INTPWGCG02();
+#endif
+#ifdef ISR_INTPWSDQFULL_ENABLED 
+	extern void ISR_INTPWSDQFULL();
+#endif
+#ifdef ISR_INTCXP10TI_ENABLED 
+	extern void ISR_INTCXP10TI();
+#endif
+#ifdef ISR_INTCXP12TI_ENABLED 
+	extern void ISR_INTCXP12TI();
+#endif
+#ifdef ISR_INTCXP10RI_ENABLED 
+	extern void ISR_INTCXP10RI();
+#endif
+#ifdef ISR_INTCXP12RI_ENABLED 
+	extern void ISR_INTCXP12RI();
+#endif
+#ifdef ISR_INTCXP10SI_ENABLED 
+	extern void ISR_INTCXP10SI();
+#endif
+#ifdef ISR_INTCXP12SI_ENABLED 
+	extern void ISR_INTCXP12SI();
+#endif
+#ifdef ISR_INTCXP11TI_ENABLED 
+	extern void ISR_INTCXP11TI();
+#endif
+#ifdef ISR_INTCXP13TI_ENABLED 
+	extern void ISR_INTCXP13TI();
+#endif
+#ifdef ISR_INTCXP11RI_ENABLED 
+	extern void ISR_INTCXP11RI();
+#endif
+#ifdef ISR_INTCXP13RI_ENABLED 
+	extern void ISR_INTCXP13RI();
+#endif
+#ifdef ISR_INTCXP11SI_ENABLED 
+	extern void ISR_INTCXP11SI();
+#endif
+#ifdef ISR_INTCXP13SI_ENABLED 
+	extern void ISR_INTCXP13SI();
+#endif
+#ifdef ISR_INTRI3C0RESP_ENABLED 
+	extern void ISR_INTRI3C0RESP();
+#endif
+#ifdef ISR_INTRI3C0CMD_ENABLED 
+	extern void ISR_INTRI3C0CMD();
+#endif
+#ifdef ISR_INTRI3C0IBI_ENABLED 
+	extern void ISR_INTRI3C0IBI();
+#endif
+#ifdef ISR_INTRI3C0RX0_ENABLED 
+	extern void ISR_INTRI3C0RX0();
+#endif
+#ifdef ISR_INTRI3C0TX0_ENABLED 
+	extern void ISR_INTRI3C0TX0();
+#endif
+#ifdef ISR_INTRI3C0RCV_ENABLED 
+	extern void ISR_INTRI3C0RCV();
+#endif
+#ifdef ISR_INTRI3C0HRESP_ENABLED 
+	extern void ISR_INTRI3C0HRESP();
+#endif
+#ifdef ISR_INTRI3C0HCMD_ENABLED 
+	extern void ISR_INTRI3C0HCMD();
+#endif
+#ifdef ISR_INTRI3C0HRX_ENABLED 
+	extern void ISR_INTRI3C0HRX();
+#endif
+#ifdef ISR_INTRI3C0HTX_ENABLED 
+	extern void ISR_INTRI3C0HTX();
+#endif
+#ifdef ISR_INTRI3C0TEND_ENABLED 
+	extern void ISR_INTRI3C0TEND();
+#endif
+#ifdef ISR_INTRI3C0EEI_ENABLED 
+	extern void ISR_INTRI3C0EEI();
+#endif
+#ifdef ISR_INTRIIC0EE_ENABLED 
+	extern void ISR_INTRIIC0EE();
+#endif
+#ifdef ISR_INTRIIC0RI_ENABLED 
+	extern void ISR_INTRIIC0RI();
+#endif
+#ifdef ISR_INTRIIC0TI_ENABLED 
+	extern void ISR_INTRIIC0TI();
+#endif
+#ifdef ISR_INTRIIC0TEI_ENABLED 
+	extern void ISR_INTRIIC0TEI();
+#endif
+#ifdef ISR_INTRIIC1EE_ENABLED 
+	extern void ISR_INTRIIC1EE();
+#endif
+#ifdef ISR_INTRIIC1RI_ENABLED 
+	extern void ISR_INTRIIC1RI();
+#endif
+#ifdef ISR_INTRIIC1TI_ENABLED 
+	extern void ISR_INTRIIC1TI();
+#endif
+#ifdef ISR_INTRIIC1TEI_ENABLED 
+	extern void ISR_INTRIIC1TEI();
+#endif
+#ifdef ISR_INTCWEND_ENABLED 
+	extern void ISR_INTCWEND();
+#endif
+#ifdef ISR_INTDPE_ENABLED 
+	extern void ISR_INTDPE();
+#endif
+#ifdef ISR_INTLPSTM0_ENABLED 
+	extern void ISR_INTLPSTM0();
+#endif
+#ifdef ISR_INTLPSTM2_ENABLED 
+	extern void ISR_INTLPSTM2();
+#endif
+#ifdef ISR_INTLPSTM4_ENABLED 
+	extern void ISR_INTLPSTM4();
+#endif
+#ifdef ISR_INTLPSTM1_ENABLED 
+	extern void ISR_INTLPSTM1();
+#endif
+#ifdef ISR_INTLPSTM3_ENABLED 
+	extern void ISR_INTLPSTM3();
+#endif
+#ifdef ISR_INTRSIPMFATALERR_ENABLED 
+	extern void ISR_INTRSIPMFATALERR();
+#endif
+#ifdef ISR_INTWDTBATIT_ENABLED 
+	extern void ISR_INTWDTBATIT();
+#endif
+#ifdef ISR_INTDCUTDI_ENABLED 
+	extern void ISR_INTDCUTDI();
+#endif
+#ifdef ISR_INTSSIF0TX_ENABLED 
+	extern void ISR_INTSSIF0TX();
+#endif
+#ifdef ISR_INTSSIF0RX_ENABLED 
+	extern void ISR_INTSSIF0RX();
+#endif
+#ifdef ISR_INTSSIF0_ENABLED 
+	extern void ISR_INTSSIF0();
+#endif
+#ifdef ISR_INTSSIF1TX_ENABLED 
+	extern void ISR_INTSSIF1TX();
+#endif
+#ifdef ISR_INTSSIF1RX_ENABLED 
+	extern void ISR_INTSSIF1RX();
+#endif
+#ifdef ISR_INTSSIF1_ENABLED 
+	extern void ISR_INTSSIF1();
+#endif
+#ifdef ISR_INTPDMAC1CH0_ENABLED 
+	extern void ISR_INTPDMAC1CH0();
+#endif
+#ifdef ISR_INTPDMAC1CH2_ENABLED 
+	extern void ISR_INTPDMAC1CH2();
+#endif
+#ifdef ISR_INTPDMAC1CH4_ENABLED 
+	extern void ISR_INTPDMAC1CH4();
+#endif
+#ifdef ISR_INTPDMAC1CH6_ENABLED 
+	extern void ISR_INTPDMAC1CH6();
+#endif
+#ifdef ISR_INTPDMAC1CH1_ENABLED 
+	extern void ISR_INTPDMAC1CH1();
+#endif
+#ifdef ISR_INTPDMAC1CH3_ENABLED 
+	extern void ISR_INTPDMAC1CH3();
+#endif
+#ifdef ISR_INTPDMAC1CH5_ENABLED 
+	extern void ISR_INTPDMAC1CH5();
+#endif
+#ifdef ISR_INTPDMAC1CH7_ENABLED 
+	extern void ISR_INTPDMAC1CH7();
+#endif
+#ifdef ISR_INTTAUD2I0_ENABLED 
+	extern void ISR_INTTAUD2I0();
+#endif
+#ifdef ISR_INTTAUD2I2_ENABLED 
+	extern void ISR_INTTAUD2I2();
+#endif
+#ifdef ISR_INTTAUD2I4_ENABLED 
+	extern void ISR_INTTAUD2I4();
+#endif
+#ifdef ISR_INTTAUD2I6_ENABLED 
+	extern void ISR_INTTAUD2I6();
+#endif
+#ifdef ISR_INTTAUD2I8_ENABLED 
+	extern void ISR_INTTAUD2I8();
+#endif
+#ifdef ISR_INTTAUD2I10_ENABLED 
+	extern void ISR_INTTAUD2I10();
+#endif
+#ifdef ISR_INTTAUD2I12_ENABLED 
+	extern void ISR_INTTAUD2I12();
+#endif
+#ifdef ISR_INTTAUD2I14_ENABLED 
+	extern void ISR_INTTAUD2I14();
+#endif
+#ifdef ISR_INTTAUD2I1_ENABLED 
+	extern void ISR_INTTAUD2I1();
+#endif
+#ifdef ISR_INTTAUD2I3_ENABLED 
+	extern void ISR_INTTAUD2I3();
+#endif
+#ifdef ISR_INTTAUD2I5_ENABLED 
+	extern void ISR_INTTAUD2I5();
+#endif
+#ifdef ISR_INTTAUD2I7_ENABLED 
+	extern void ISR_INTTAUD2I7();
+#endif
+#ifdef ISR_INTTAUD2I9_ENABLED 
+	extern void ISR_INTTAUD2I9();
+#endif
+#ifdef ISR_INTTAUD2I11_ENABLED 
+	extern void ISR_INTTAUD2I11();
+#endif
+#ifdef ISR_INTTAUD2I13_ENABLED 
+	extern void ISR_INTTAUD2I13();
+#endif
+#ifdef ISR_INTTAUD2I15_ENABLED 
+	extern void ISR_INTTAUD2I15();
+#endif
+#ifdef ISR_IRQ7_ENABLED 
+	extern void ISR_IRQ7();
+#endif
+#ifdef ISR_IRQ9_ENABLED 
+	extern void ISR_IRQ9();
+#endif
+#ifdef ISR_IRQ10_ENABLED 
+	extern void ISR_IRQ10();
+#endif
+#ifdef ISR_IRQ11_ENABLED 
+	extern void ISR_IRQ11();
+#endif
+#ifdef ISR_IRQ12_ENABLED 
+	extern void ISR_IRQ12();
+#endif
+#ifdef ISR_IRQ13_ENABLED 
+	extern void ISR_IRQ13();
+#endif
+#ifdef ISR_IRQ14_ENABLED 
+	extern void ISR_IRQ14();
+#endif
+#ifdef ISR_IRQ15_ENABLED 
+	extern void ISR_IRQ15();
+#endif
+#ifdef ISR_IRQ17_ENABLED 
+	extern void ISR_IRQ17();
+#endif
+#ifdef ISR_INTADCK1ERR_ENABLED 
+	extern void ISR_INTADCK1ERR();
+#endif
+#ifdef ISR_INTADCK1I0_ENABLED 
+	extern void ISR_INTADCK1I0();
+#endif
+#ifdef ISR_INTADCK1I1_ENABLED 
+	extern void ISR_INTADCK1I1();
+#endif
+#ifdef ISR_INTADCK1I2_ENABLED 
+	extern void ISR_INTADCK1I2();
+#endif
+#ifdef ISR_INTADCK1I3_ENABLED 
+	extern void ISR_INTADCK1I3();
+#endif
+#ifdef ISR_INTADCK1I4_ENABLED 
+	extern void ISR_INTADCK1I4();
+#endif
+#ifdef ISR_INTADCK1MPX_ENABLED 
+	extern void ISR_INTADCK1MPX();
+#endif
+#ifdef ISR_INTADCK1SD_ENABLED 
+	extern void ISR_INTADCK1SD();
+#endif
+#ifdef ISR_INTRLIN38_ENABLED 
+	extern void ISR_INTRLIN38();
+#endif
+#ifdef ISR_INTRLIN39_ENABLED 
+	extern void ISR_INTRLIN39();
+#endif
+#ifdef ISR_INTRLIN310_ENABLED 
+	extern void ISR_INTRLIN310();
+#endif
+#ifdef ISR_INTRLIN311_ENABLED 
+	extern void ISR_INTRLIN311();
+#endif
+#ifdef ISR_INTRLIN312_ENABLED 
+	extern void ISR_INTRLIN312();
+#endif
+#ifdef ISR_INTRLIN313_ENABLED 
+	extern void ISR_INTRLIN313();
+#endif
+#ifdef ISR_INTRLIN314_ENABLED 
+	extern void ISR_INTRLIN314();
+#endif
+#ifdef ISR_INTRLIN315_ENABLED 
+	extern void ISR_INTRLIN315();
+#endif
+#ifdef ISR_INTRLIN38UR0_ENABLED 
+	extern void ISR_INTRLIN38UR0();
+#endif
+#ifdef ISR_INTRLIN39UR0_ENABLED 
+	extern void ISR_INTRLIN39UR0();
+#endif
+#ifdef ISR_INTRLIN310UR0_ENABLED 
+	extern void ISR_INTRLIN310UR0();
+#endif
+#ifdef ISR_INTRLIN311UR0_ENABLED 
+	extern void ISR_INTRLIN311UR0();
+#endif
+#ifdef ISR_INTRLIN312UR0_ENABLED 
+	extern void ISR_INTRLIN312UR0();
+#endif
+#ifdef ISR_INTRLIN313UR0_ENABLED 
+	extern void ISR_INTRLIN313UR0();
+#endif
+#ifdef ISR_INTRLIN314UR0_ENABLED 
+	extern void ISR_INTRLIN314UR0();
+#endif
+#ifdef ISR_INTRLIN315UR0_ENABLED 
+	extern void ISR_INTRLIN315UR0();
+#endif
+#ifdef ISR_INTRLIN38UR1_ENABLED 
+	extern void ISR_INTRLIN38UR1();
+#endif
+#ifdef ISR_INTRLIN39UR1_ENABLED 
+	extern void ISR_INTRLIN39UR1();
+#endif
+#ifdef ISR_INTRLIN310UR1_ENABLED 
+	extern void ISR_INTRLIN310UR1();
+#endif
+#ifdef ISR_INTRLIN311UR1_ENABLED 
+	extern void ISR_INTRLIN311UR1();
+#endif
+#ifdef ISR_INTRLIN312UR1_ENABLED 
+	extern void ISR_INTRLIN312UR1();
+#endif
+#ifdef ISR_INTRLIN313UR1_ENABLED 
+	extern void ISR_INTRLIN313UR1();
+#endif
+#ifdef ISR_INTRLIN314UR1_ENABLED 
+	extern void ISR_INTRLIN314UR1();
+#endif
+#ifdef ISR_INTRLIN315UR1_ENABLED 
+	extern void ISR_INTRLIN315UR1();
+#endif
+#ifdef ISR_INTRLIN38UR2_ENABLED 
+	extern void ISR_INTRLIN38UR2();
+#endif
+#ifdef ISR_INTRLIN39UR2_ENABLED 
+	extern void ISR_INTRLIN39UR2();
+#endif
+#ifdef ISR_INTRLIN310UR2_ENABLED 
+	extern void ISR_INTRLIN310UR2();
+#endif
+#ifdef ISR_INTRLIN311UR2_ENABLED 
+	extern void ISR_INTRLIN311UR2();
+#endif
+#ifdef ISR_INTRLIN312UR2_ENABLED 
+	extern void ISR_INTRLIN312UR2();
+#endif
+#ifdef ISR_INTRLIN313UR2_ENABLED 
+	extern void ISR_INTRLIN313UR2();
+#endif
+#ifdef ISR_INTRLIN314UR2_ENABLED 
+	extern void ISR_INTRLIN314UR2();
+#endif
+#ifdef ISR_INTRLIN315UR2_ENABLED 
+	extern void ISR_INTRLIN315UR2();
+#endif
+#ifdef ISR_INTOSTM1TINT_ENABLED 
+	extern void ISR_INTOSTM1TINT();
+#endif
+#ifdef ISR_INTOSTM2TINT_ENABLED 
+	extern void ISR_INTOSTM2TINT();
+#endif
+#ifdef ISR_INTETNF0DATA_ENABLED 
+	extern void ISR_INTETNF0DATA();
+#endif
+#ifdef ISR_INTETNF0ERR_ENABLED 
+	extern void ISR_INTETNF0ERR();
+#endif
+#ifdef ISR_INTETNF0MNG_ENABLED 
+	extern void ISR_INTETNF0MNG();
+#endif
+#ifdef ISR_INTETNF0MAC_ENABLED 
+	extern void ISR_INTETNF0MAC();
+#endif
+#ifdef ISR_IRQ8_ENABLED 
+	extern void ISR_IRQ8();
+#endif
+#ifdef ISR_INTPSI50SI_ENABLED 
+	extern void ISR_INTPSI50SI();
+#endif
+#ifdef ISR_INTPSI50RI_ENABLED 
+	extern void ISR_INTPSI50RI();
+#endif
+#ifdef ISR_INTPSI50TI_ENABLED 
+	extern void ISR_INTPSI50TI();
+#endif
+#ifdef ISR_INTPSI51SI_ENABLED 
+	extern void ISR_INTPSI51SI();
+#endif
+#ifdef ISR_INTPSI51RI_ENABLED 
+	extern void ISR_INTPSI51RI();
+#endif
+#ifdef ISR_INTPSI51TI_ENABLED 
+	extern void ISR_INTPSI51TI();
+#endif
+#ifdef ISR_INTPSI5W_ENABLED 
+	extern void ISR_INTPSI5W();
+#endif
+#ifdef ISR_INTMMCA0_ENABLED 
+	extern void ISR_INTMMCA0();
+#endif
+#ifdef ISR_INTOSTM3TINT_ENABLED 
+	extern void ISR_INTOSTM3TINT();
+#endif
+#ifdef ISR_INTOSTM4TINT_ENABLED 
+	extern void ISR_INTOSTM4TINT();
+#endif
+#ifdef ISR_INTXCAN1FUNC_ENABLED 
+	extern void ISR_INTXCAN1FUNC();
+#endif
+#ifdef ISR_INTXCAN1ERR_ENABLED 
+	extern void ISR_INTXCAN1ERR();
+#endif
+#ifdef ISR_INTXCAN1SAFETY_ENABLED 
+	extern void ISR_INTXCAN1SAFETY();
+#endif
+#ifdef ISR_INTETND00_ENABLED 
+	extern void ISR_INTETND00();
+#endif
+#ifdef ISR_INTETND01_ENABLED 
+	extern void ISR_INTETND01();
+#endif
+#ifdef ISR_INTETND02_ENABLED 
+	extern void ISR_INTETND02();
+#endif
+#ifdef ISR_INTETND03_ENABLED 
+	extern void ISR_INTETND03();
+#endif
+#ifdef ISR_INTETND04_ENABLED 
+	extern void ISR_INTETND04();
+#endif
+#ifdef ISR_INTETND05_ENABLED 
+	extern void ISR_INTETND05();
+#endif
+#ifdef ISR_INTETND06_ENABLED 
+	extern void ISR_INTETND06();
+#endif
+#ifdef ISR_INTGPTP_ENABLED 
+	extern void ISR_INTGPTP();
+#endif
+#ifdef ISR_IRQ25_ENABLED 
+	extern void ISR_IRQ25();
+#endif
+#ifdef ISR_INTRLIN316_ENABLED 
+	extern void ISR_INTRLIN316();
+#endif
+#ifdef ISR_INTRLIN317_ENABLED 
+	extern void ISR_INTRLIN317();
+#endif
+#ifdef ISR_INTRLIN316UR0_ENABLED 
+	extern void ISR_INTRLIN316UR0();
+#endif
+#ifdef ISR_INTRLIN317UR0_ENABLED 
+	extern void ISR_INTRLIN317UR0();
+#endif
+#ifdef ISR_INTRLIN316UR1_ENABLED 
+	extern void ISR_INTRLIN316UR1();
+#endif
+#ifdef ISR_INTRLIN317UR1_ENABLED 
+	extern void ISR_INTRLIN317UR1();
+#endif
+#ifdef ISR_INTRLIN316UR2_ENABLED 
+	extern void ISR_INTRLIN316UR2();
+#endif
+#ifdef ISR_INTRLIN317UR2_ENABLED 
+	extern void ISR_INTRLIN317UR2();
+#endif
+#ifdef NVIC_0_ENABLED 
+extern void NVIC_ISR_0(void);
+#endif
+#ifdef NVIC_1_ENABLED 
+extern void NVIC_ISR_1(void);
+#endif
+#ifdef NVIC_2_ENABLED 
+extern void NVIC_ISR_2(void);
+#endif
+#ifdef NVIC_3_ENABLED 
+extern void NVIC_ISR_3(void);
+#endif
+#ifdef NVIC_4_ENABLED 
+extern void NVIC_ISR_4(void);
+#endif
+#ifdef NVIC_5_ENABLED 
+extern void NVIC_ISR_5(void);
+#endif
+#ifdef NVIC_6_ENABLED 
+extern void NVIC_ISR_6(void);
+#endif
+#ifdef NVIC_7_ENABLED 
+extern void NVIC_ISR_7(void);
+#endif
+#ifdef NVIC_8_ENABLED 
+extern void NVIC_ISR_8(void);
+#endif
+#ifdef NVIC_9_ENABLED 
+extern void NVIC_ISR_9(void);
+#endif
+#ifdef NVIC_10_ENABLED 
+extern void NVIC_ISR_10(void);
+#endif
+#ifdef NVIC_11_ENABLED 
+extern void NVIC_ISR_11(void);
+#endif
+#ifdef NVIC_12_ENABLED 
+extern void NVIC_ISR_12(void);
+#endif
+#ifdef NVIC_13_ENABLED 
+extern void NVIC_ISR_13(void);
+#endif
+#ifdef NVIC_14_ENABLED 
+extern void NVIC_ISR_14(void);
+#endif
+#ifdef NVIC_15_ENABLED 
+extern void NVIC_ISR_15(void);
+#endif
+#ifdef NVIC_16_ENABLED 
+extern void NVIC_ISR_16(void);
+#endif
+#ifdef NVIC_17_ENABLED 
+extern void NVIC_ISR_17(void);
+#endif
+#ifdef NVIC_18_ENABLED 
+extern void NVIC_ISR_18(void);
+#endif
+#ifdef NVIC_19_ENABLED 
+extern void NVIC_ISR_19(void);
+#endif
+#ifdef NVIC_20_ENABLED 
+extern void NVIC_ISR_20(void);
+#endif
+#ifdef NVIC_21_ENABLED 
+extern void NVIC_ISR_21(void);
+#endif
+#ifdef NVIC_22_ENABLED 
+extern void NVIC_ISR_22(void);
+#endif
+#ifdef NVIC_23_ENABLED 
+extern void NVIC_ISR_23(void);
+#endif
+#ifdef NVIC_24_ENABLED 
+extern void NVIC_ISR_24(void);
+#endif
+#ifdef NVIC_25_ENABLED 
+extern void NVIC_ISR_25(void);
+#endif
+#ifdef NVIC_26_ENABLED 
+extern void NVIC_ISR_26(void);
+#endif
+#ifdef NVIC_27_ENABLED 
+extern void NVIC_ISR_27(void);
+#endif
+#ifdef NVIC_28_ENABLED 
+extern void NVIC_ISR_28(void);
+#endif
+#ifdef NVIC_29_ENABLED 
+extern void NVIC_ISR_29(void);
+#endif
+#ifdef NVIC_30_ENABLED 
+extern void NVIC_ISR_30(void);
+#endif
+#ifdef NVIC_31_ENABLED 
+extern void NVIC_ISR_31(void);
+#endif
+#ifdef NVIC_32_ENABLED 
+extern void NVIC_ISR_32(void);
+#endif
+#ifdef NVIC_33_ENABLED 
+extern void NVIC_ISR_33(void);
+#endif
+#ifdef NVIC_34_ENABLED 
+extern void NVIC_ISR_34(void);
+#endif
+#ifdef NVIC_35_ENABLED 
+extern void NVIC_ISR_35(void);
+#endif
+#ifdef NVIC_36_ENABLED 
+extern void NVIC_ISR_36(void);
+#endif
+#ifdef NVIC_37_ENABLED 
+extern void NVIC_ISR_37(void);
+#endif
+#ifdef NVIC_38_ENABLED 
+extern void NVIC_ISR_38(void);
+#endif
+#ifdef NVIC_39_ENABLED 
+extern void NVIC_ISR_39(void);
+#endif
+#ifdef NVIC_40_ENABLED 
+extern void NVIC_ISR_40(void);
+#endif
+#ifdef NVIC_41_ENABLED 
+extern void NVIC_ISR_41(void);
+#endif
+#ifdef NVIC_42_ENABLED 
+extern void NVIC_ISR_42(void);
+#endif
+#ifdef NVIC_43_ENABLED 
+extern void NVIC_ISR_43(void);
+#endif
+#ifdef NVIC_44_ENABLED 
+extern void NVIC_ISR_44(void);
+#endif
+#ifdef NVIC_45_ENABLED 
+extern void NVIC_ISR_45(void);
+#endif
+#ifdef NVIC_46_ENABLED 
+extern void NVIC_ISR_46(void);
+#endif
+#ifdef NVIC_47_ENABLED 
+extern void NVIC_ISR_47(void);
+#endif
+#ifdef NVIC_48_ENABLED 
+extern void NVIC_ISR_48(void);
+#endif
+#ifdef NVIC_49_ENABLED 
+extern void NVIC_ISR_49(void);
+#endif
+#ifdef NVIC_50_ENABLED 
+extern void NVIC_ISR_50(void);
+#endif
+#ifdef NVIC_51_ENABLED 
+extern void NVIC_ISR_51(void);
+#endif
+#ifdef NVIC_52_ENABLED 
+extern void NVIC_ISR_52(void);
+#endif
+#ifdef NVIC_53_ENABLED 
+extern void NVIC_ISR_53(void);
+#endif
+#ifdef NVIC_54_ENABLED 
+extern void NVIC_ISR_54(void);
+#endif
+#ifdef NVIC_55_ENABLED 
+extern void NVIC_ISR_55(void);
+#endif
+#ifdef NVIC_56_ENABLED 
+extern void NVIC_ISR_56(void);
+#endif
+#ifdef NVIC_57_ENABLED 
+extern void NVIC_ISR_57(void);
+#endif
+#ifdef NVIC_58_ENABLED 
+extern void NVIC_ISR_58(void);
+#endif
+#ifdef NVIC_59_ENABLED 
+extern void NVIC_ISR_59(void);
+#endif
+#ifdef NVIC_60_ENABLED 
+extern void NVIC_ISR_60(void);
+#endif
+#ifdef NVIC_61_ENABLED 
+extern void NVIC_ISR_61(void);
+#endif
+#ifdef NVIC_62_ENABLED 
+extern void NVIC_ISR_62(void);
+#endif
+#ifdef NVIC_63_ENABLED 
+extern void NVIC_ISR_63(void);
+#endif
+#ifdef NVIC_64_ENABLED 
+extern void NVIC_ISR_64(void);
+#endif
+#ifdef NVIC_65_ENABLED 
+extern void NVIC_ISR_65(void);
+#endif
+#ifdef NVIC_66_ENABLED 
+extern void NVIC_ISR_66(void);
+#endif
+#ifdef NVIC_67_ENABLED 
+extern void NVIC_ISR_67(void);
+#endif
+#ifdef NVIC_68_ENABLED 
+extern void NVIC_ISR_68(void);
+#endif
+#ifdef NVIC_69_ENABLED 
+extern void NVIC_ISR_69(void);
+#endif
+#ifdef NVIC_70_ENABLED 
+extern void NVIC_ISR_70(void);
+#endif
+#ifdef NVIC_71_ENABLED 
+extern void NVIC_ISR_71(void);
+#endif
+#ifdef NVIC_72_ENABLED 
+extern void NVIC_ISR_72(void);
+#endif
+#ifdef NVIC_73_ENABLED 
+extern void NVIC_ISR_73(void);
+#endif
+#ifdef NVIC_74_ENABLED 
+extern void NVIC_ISR_74(void);
+#endif
+#ifdef NVIC_75_ENABLED 
+extern void NVIC_ISR_75(void);
+#endif
+#ifdef NVIC_77_ENABLED 
+extern void NVIC_ISR_77(void);
+#endif
+#ifdef NVIC_78_ENABLED 
+extern void NVIC_ISR_78(void);
+#endif
+#ifdef NVIC_79_ENABLED 
+extern void NVIC_ISR_79(void);
+#endif
+#ifdef NVIC_80_ENABLED 
+extern void NVIC_ISR_80(void);
+#endif
+#ifdef NVIC_81_ENABLED 
+extern void NVIC_ISR_81(void);
+#endif
+#ifdef NVIC_82_ENABLED 
+extern void NVIC_ISR_82(void);
+#endif
+#ifdef NVIC_83_ENABLED 
+extern void NVIC_ISR_83(void);
+#endif
+#ifdef NVIC_84_ENABLED 
+extern void NVIC_ISR_84(void);
+#endif
+#ifdef NVIC_85_ENABLED 
+extern void NVIC_ISR_85(void);
+#endif
+#ifdef NVIC_86_ENABLED 
+extern void NVIC_ISR_86(void);
+#endif
+#ifdef NVIC_87_ENABLED 
+extern void NVIC_ISR_87(void);
+#endif
+#ifdef NVIC_88_ENABLED 
+extern void NVIC_ISR_88(void);
+#endif
+#ifdef NVIC_89_ENABLED 
+extern void NVIC_ISR_89(void);
+#endif
+#ifdef NVIC_90_ENABLED 
+extern void NVIC_ISR_90(void);
+#endif
+#ifdef NVIC_91_ENABLED 
+extern void NVIC_ISR_91(void);
+#endif
+#ifdef NVIC_92_ENABLED 
+extern void NVIC_ISR_92(void);
+#endif
+#ifdef NVIC_93_ENABLED 
+extern void NVIC_ISR_93(void);
+#endif
+#ifdef NVIC_94_ENABLED 
+extern void NVIC_ISR_94(void);
+#endif
+#ifdef NVIC_95_ENABLED 
+extern void NVIC_ISR_95(void);
+#endif
+#ifdef NVIC_96_ENABLED 
+extern void NVIC_ISR_96(void);
+#endif
+#ifdef NVIC_97_ENABLED 
+extern void NVIC_ISR_97(void);
+#endif
+#ifdef NVIC_98_ENABLED 
+extern void NVIC_ISR_98(void);
+#endif
+#ifdef NVIC_99_ENABLED 
+extern void NVIC_ISR_99(void);
+#endif
+#ifdef NVIC_100_ENABLED 
+extern void NVIC_ISR_100(void);
+#endif
+#ifdef NVIC_101_ENABLED 
+extern void NVIC_ISR_101(void);
+#endif
+#ifdef NVIC_102_ENABLED 
+extern void NVIC_ISR_102(void);
+#endif
+#ifdef NVIC_103_ENABLED 
+extern void NVIC_ISR_103(void);
+#endif
+#ifdef NVIC_104_ENABLED 
+extern void NVIC_ISR_104(void);
+#endif
+#ifdef NVIC_105_ENABLED 
+extern void NVIC_ISR_105(void);
+#endif
+#ifdef NVIC_106_ENABLED 
+extern void NVIC_ISR_106(void);
+#endif
+#ifdef NVIC_107_ENABLED 
+extern void NVIC_ISR_107(void);
+#endif
+#ifdef NVIC_108_ENABLED 
+extern void NVIC_ISR_108(void);
+#endif
+#ifdef NVIC_109_ENABLED 
+extern void NVIC_ISR_109(void);
+#endif
+#ifdef NVIC_110_ENABLED 
+extern void NVIC_ISR_110(void);
+#endif
+#ifdef NVIC_111_ENABLED 
+extern void NVIC_ISR_111(void);
+#endif
+#ifdef NVIC_112_ENABLED 
+extern void NVIC_ISR_112(void);
+#endif
+#ifdef NVIC_113_ENABLED 
+extern void NVIC_ISR_113(void);
+#endif
+#ifdef NVIC_114_ENABLED 
+extern void NVIC_ISR_114(void);
+#endif
+#ifdef NVIC_115_ENABLED 
+extern void NVIC_ISR_115(void);
+#endif
+#ifdef NVIC_116_ENABLED 
+extern void NVIC_ISR_116(void);
+#endif
+#ifdef NVIC_117_ENABLED 
+extern void NVIC_ISR_117(void);
+#endif
+#ifdef NVIC_118_ENABLED 
+extern void NVIC_ISR_118(void);
+#endif
+#ifdef NVIC_119_ENABLED 
+extern void NVIC_ISR_119(void);
+#endif
+#ifdef NVIC_120_ENABLED 
+extern void NVIC_ISR_120(void);
+#endif
+#ifdef NVIC_121_ENABLED 
+extern void NVIC_ISR_121(void);
+#endif
+#ifdef NVIC_122_ENABLED 
+extern void NVIC_ISR_122(void);
+#endif
+#ifdef NVIC_123_ENABLED 
+extern void NVIC_ISR_123(void);
+#endif
+#ifdef NVIC_124_ENABLED 
+extern void NVIC_ISR_124(void);
+#endif
+#ifdef NVIC_125_ENABLED 
+extern void NVIC_ISR_125(void);
+#endif
+#ifdef NVIC_126_ENABLED 
+extern void NVIC_ISR_126(void);
+#endif
+#ifdef NVIC_127_ENABLED 
+extern void NVIC_ISR_127(void);
+#endif
+#ifdef NVIC_128_ENABLED 
+extern void NVIC_ISR_128(void);
+#endif
+#ifdef NVIC_129_ENABLED 
+extern void NVIC_ISR_129(void);
+#endif
+#ifdef NVIC_130_ENABLED 
+extern void NVIC_ISR_130(void);
+#endif
+#ifdef NVIC_131_ENABLED 
+extern void NVIC_ISR_131(void);
+#endif
+#ifdef NVIC_132_ENABLED 
+extern void NVIC_ISR_132(void);
+#endif
+#ifdef NVIC_133_ENABLED 
+extern void NVIC_ISR_133(void);
+#endif
+#ifdef NVIC_134_ENABLED 
+extern void NVIC_ISR_134(void);
+#endif
+#ifdef NVIC_135_ENABLED 
+extern void NVIC_ISR_135(void);
+#endif
+#ifdef NVIC_136_ENABLED 
+extern void NVIC_ISR_136(void);
+#endif
+#ifdef NVIC_137_ENABLED 
+extern void NVIC_ISR_137(void);
+#endif
+#ifdef NVIC_138_ENABLED 
+extern void NVIC_ISR_138(void);
+#endif
+#ifdef NVIC_139_ENABLED 
+extern void NVIC_ISR_139(void);
+#endif
+#ifdef NVIC_140_ENABLED 
+extern void NVIC_ISR_140(void);
+#endif
+#ifdef NVIC_141_ENABLED 
+extern void NVIC_ISR_141(void);
+#endif
+#ifdef NVIC_142_ENABLED 
+extern void NVIC_ISR_142(void);
+#endif
+#ifdef NVIC_143_ENABLED 
+extern void NVIC_ISR_143(void);
+#endif
+#ifdef NVIC_144_ENABLED 
+extern void NVIC_ISR_144(void);
+#endif
+#ifdef NVIC_145_ENABLED 
+extern void NVIC_ISR_145(void);
+#endif
+#ifdef NVIC_146_ENABLED 
+extern void NVIC_ISR_146(void);
+#endif
+#ifdef NVIC_147_ENABLED 
+extern void NVIC_ISR_147(void);
+#endif
+#ifdef NVIC_148_ENABLED 
+extern void NVIC_ISR_148(void);
+#endif
+#ifdef NVIC_149_ENABLED 
+extern void NVIC_ISR_149(void);
+#endif
+#ifdef NVIC_150_ENABLED 
+extern void NVIC_ISR_150(void);
+#endif
+#ifdef NVIC_151_ENABLED 
+extern void NVIC_ISR_151(void);
+#endif
+#ifdef NVIC_152_ENABLED 
+extern void NVIC_ISR_152(void);
+#endif
+#ifdef NVIC_153_ENABLED 
+extern void NVIC_ISR_153(void);
+#endif
+#ifdef NVIC_154_ENABLED 
+extern void NVIC_ISR_154(void);
+#endif
+#ifdef NVIC_155_ENABLED 
+extern void NVIC_ISR_155(void);
+#endif
+#ifdef NVIC_156_ENABLED 
+extern void NVIC_ISR_156(void);
+#endif
+#ifdef NVIC_157_ENABLED 
+extern void NVIC_ISR_157(void);
+#endif
+#ifdef NVIC_158_ENABLED 
+extern void NVIC_ISR_158(void);
+#endif
+#ifdef NVIC_159_ENABLED 
+extern void NVIC_ISR_159(void);
+#endif
+#ifdef NVIC_160_ENABLED 
+extern void NVIC_ISR_160(void);
+#endif
+#ifdef NVIC_161_ENABLED 
+extern void NVIC_ISR_161(void);
+#endif
+#ifdef NVIC_162_ENABLED 
+extern void NVIC_ISR_162(void);
+#endif
+#ifdef NVIC_163_ENABLED 
+extern void NVIC_ISR_163(void);
+#endif
+#ifdef NVIC_164_ENABLED 
+extern void NVIC_ISR_164(void);
+#endif
+#ifdef NVIC_165_ENABLED 
+extern void NVIC_ISR_165(void);
+#endif
+#ifdef NVIC_166_ENABLED 
+extern void NVIC_ISR_166(void);
+#endif
+#ifdef NVIC_167_ENABLED 
+extern void NVIC_ISR_167(void);
+#endif
+#ifdef NVIC_168_ENABLED 
+extern void NVIC_ISR_168(void);
+#endif
+#ifdef NVIC_169_ENABLED 
+extern void NVIC_ISR_169(void);
+#endif
+#ifdef NVIC_170_ENABLED 
+extern void NVIC_ISR_170(void);
+#endif
+#ifdef NVIC_171_ENABLED 
+extern void NVIC_ISR_171(void);
+#endif
+#ifdef NVIC_172_ENABLED 
+extern void NVIC_ISR_172(void);
+#endif
+#ifdef NVIC_173_ENABLED 
+extern void NVIC_ISR_173(void);
+#endif
+#ifdef NVIC_174_ENABLED 
+extern void NVIC_ISR_174(void);
+#endif
+#ifdef NVIC_175_ENABLED 
+extern void NVIC_ISR_175(void);
+#endif
+#ifdef NVIC_176_ENABLED 
+extern void NVIC_ISR_176(void);
+#endif
+#ifdef NVIC_177_ENABLED 
+extern void NVIC_ISR_177(void);
+#endif
+#ifdef NVIC_178_ENABLED 
+extern void NVIC_ISR_178(void);
+#endif
+#ifdef NVIC_179_ENABLED 
+extern void NVIC_ISR_179(void);
+#endif
+#ifdef NVIC_180_ENABLED 
+extern void NVIC_ISR_180(void);
+#endif
+#ifdef NVIC_181_ENABLED 
+extern void NVIC_ISR_181(void);
+#endif
+#ifdef NVIC_182_ENABLED 
+extern void NVIC_ISR_182(void);
+#endif
+#ifdef NVIC_183_ENABLED 
+extern void NVIC_ISR_183(void);
+#endif
+#ifdef NVIC_184_ENABLED 
+extern void NVIC_ISR_184(void);
+#endif
+#ifdef NVIC_185_ENABLED 
+extern void NVIC_ISR_185(void);
+#endif
+#ifdef NVIC_186_ENABLED 
+extern void NVIC_ISR_186(void);
+#endif
+#ifdef NVIC_187_ENABLED 
+extern void NVIC_ISR_187(void);
+#endif
+#ifdef NVIC_188_ENABLED 
+extern void NVIC_ISR_188(void);
+#endif
+#ifdef NVIC_189_ENABLED 
+extern void NVIC_ISR_189(void);
+#endif
+#ifdef NVIC_190_ENABLED 
+extern void NVIC_ISR_190(void);
+#endif
+#ifdef NVIC_191_ENABLED 
+extern void NVIC_ISR_191(void);
+#endif
+#ifdef NVIC_192_ENABLED 
+extern void NVIC_ISR_192(void);
+#endif
+#ifdef NVIC_193_ENABLED 
+extern void NVIC_ISR_193(void);
+#endif
+#ifdef NVIC_194_ENABLED 
+extern void NVIC_ISR_194(void);
+#endif
+#ifdef NVIC_195_ENABLED 
+extern void NVIC_ISR_195(void);
+#endif
+#ifdef NVIC_196_ENABLED 
+extern void NVIC_ISR_196(void);
+#endif
+#ifdef IMFUL_0_ENABLED
+extern void ISR_IMFUL_0(void);
+#endif
+#ifdef IMFUL_1_ENABLED
+extern void ISR_IMFUL_1(void);
+#endif
+#ifdef IMFUL_2_ENABLED
+extern void ISR_IMFUL_2(void);
+#endif
+#ifdef IMFUL_3_ENABLED
+extern void ISR_IMFUL_3(void);
+#endif
+#ifdef IMFUL_4_ENABLED
+extern void ISR_IMFUL_4(void);
+#endif
+#ifdef IMFUL_5_ENABLED
+extern void ISR_IMFUL_5(void);
+#endif
+#ifdef IMFUL_6_ENABLED
+extern void ISR_IMFUL_6(void);
+#endif
+#ifdef IMFUL_7_ENABLED
+extern void ISR_IMFUL_7(void);
+#endif
+#ifdef IMFUL_8_ENABLED
+extern void ISR_IMFUL_8(void);
+#endif
+#ifdef IMFUL_9_ENABLED
+extern void ISR_IMFUL_9(void);
+#endif
+#ifdef IMFUL_10_ENABLED
+extern void ISR_IMFUL_10(void);
+#endif
+#ifdef IMFUL_11_ENABLED
+extern void ISR_IMFUL_11(void);
+#endif
+#ifdef IMFUL_12_ENABLED
+extern void ISR_IMFUL_12(void);
+#endif
+#ifdef IMFUL_13_ENABLED
+extern void ISR_IMFUL_13(void);
+#endif
+#ifdef IMFUP_0_ENABLED
+extern void ISR_IMFUP_0(void);
+#endif
+#ifdef IMFUP_1_ENABLED
+extern void ISR_IMFUP_1(void);
+#endif
+#ifdef IMFUP_2_ENABLED
+extern void ISR_IMFUP_2(void);
+#endif
+#ifdef IMFUP_3_ENABLED
+extern void ISR_IMFUP_3(void);
+#endif
+#ifdef IMFUP_4_ENABLED
+extern void ISR_IMFUP_4(void);
+#endif
+#ifdef IMFUP_5_ENABLED
+extern void ISR_IMFUP_5(void);
+#endif
+#ifdef IMFUP_6_ENABLED
+extern void ISR_IMFUP_6(void);
+#endif
+#ifdef IMFUP_7_ENABLED
+extern void ISR_IMFUP_7(void);
+#endif
+#ifdef IMFUP_8_ENABLED
+extern void ISR_IMFUP_8(void);
+#endif
+#ifdef IMFUP_9_ENABLED
+extern void ISR_IMFUP_9(void);
+#endif
+#ifdef IMFUP_10_ENABLED
+extern void ISR_IMFUP_10(void);
+#endif
+#ifdef IMFUP_11_ENABLED
+extern void ISR_IMFUP_11(void);
+#endif
+#ifdef IMFUP_12_ENABLED
+extern void ISR_IMFUP_12(void);
+#endif
+#ifdef IMFUP_13_ENABLED
+extern void ISR_IMFUP_13(void);
+#endif
+#ifdef IMFUP_14_ENABLED
+extern void ISR_IMFUP_14(void);
+#endif
+#ifdef IMFUP_15_ENABLED
+extern void ISR_IMFUP_15(void);
+#endif
+#ifdef IMFUP_16_ENABLED
+extern void ISR_IMFUP_16(void);
+#endif
+#ifdef IMFUP_17_ENABLED
+extern void ISR_IMFUP_17(void);
+#endif
+#ifdef IMFUP_18_ENABLED
+extern void ISR_IMFUP_18(void);
+#endif
+#ifdef IMFUP_19_ENABLED
+extern void ISR_IMFUP_19(void);
+#endif
+#ifdef IMFUP_20_ENABLED
+extern void ISR_IMFUP_20(void);
+#endif
+#ifdef IMFUP_21_ENABLED
+extern void ISR_IMFUP_21(void);
+#endif
+#ifdef IMFUP_22_ENABLED
+extern void ISR_IMFUP_22(void);
+#endif
+#ifdef IMFUP_23_ENABLED
+extern void ISR_IMFUP_23(void);
+#endif
+#ifdef IMFUP_24_ENABLED
+extern void ISR_IMFUP_24(void);
+#endif
+#ifdef IMFUP_25_ENABLED
+extern void ISR_IMFUP_25(void);
+#endif
+#ifdef IMFUP_26_ENABLED
+extern void ISR_IMFUP_26(void);
+#endif
+#ifdef IMFUP_27_ENABLED
+extern void ISR_IMFUP_27(void);
+#endif
+#ifdef IMFUP_28_ENABLED
+extern void ISR_IMFUP_28(void);
+#endif
+#ifdef IMFUP_29_ENABLED
+extern void ISR_IMFUP_29(void);
+#endif
+#ifdef IMFUP_30_ENABLED
+extern void ISR_IMFUP_30(void);
+#endif
+#ifdef IMFUP_31_ENABLED
+extern void ISR_IMFUP_31(void);
+#endif
+#ifdef IMFUP_32_ENABLED
+extern void ISR_IMFUP_32(void);
+#endif
+#ifdef IMFUP_33_ENABLED
+extern void ISR_IMFUP_33(void);
+#endif
+#ifdef IMFUP_34_ENABLED
+extern void ISR_IMFUP_34(void);
+#endif
+#ifdef IMFUP_35_ENABLED
+extern void ISR_IMFUP_35(void);
+#endif
+#ifdef IMFUP_36_ENABLED
+extern void ISR_IMFUP_36(void);
+#endif
+#endif /* INTVEC_INTERRUPTS_DATA_H_ */

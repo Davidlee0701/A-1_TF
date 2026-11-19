@@ -1,0 +1,33 @@
+#!gbuild
+primaryTarget=arm_standalone.tgt
+#component top_level_project
+[Project]
+	-bsp generic
+	-cpu=cortexm33
+	-align8
+	-Onone
+	#-Iansi
+	-e __start
+	#-nostdlib
+	-I./PE0/inc
+	-I./PE0/inc/device_svd
+	-I./PE0/macro
+	-I./PE0/macro/cpu_ss_workaround
+	-I./PE0/macro/standardports
+	-I./PE0/macro/EXT_CLK
+	-I./PE0/macro/Interrupts
+	-I./PE0/macro/simple_uart
+	-I./PE0/rsip_hsm
+	-I./PE0/inc/CMSIS_5/CMSIS/Core/Include
+	--no_commons
+	:sourceDir=.
+	:binDir=.\output
+	-dwarf2
+	#-gnu99
+	-gcc
+
+	-gnu99
+PE0\PE0.gpj		[Program]
+sample_project\secure_cpu.gpj		[Program]
+E2_U5L_20M.con
+#mca.gpj		[MultiCoreArchive]

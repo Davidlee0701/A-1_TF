@@ -1,0 +1,63 @@
+	.section .isr_vector
+	.align 9
+
+	.globl __secure_isr_vector
+__secure_isr_vector:
+	.word (__secure_stack_top - 4)
+	.word (__secure_start + 1)
+	.word (_secure_dummy + 1)
+	.word (_secure_dummy + 1)
+	.word (_secure_dummy + 1)
+	.word (_secure_dummy + 1)
+	.word (_secure_dummy + 1)
+	.word (_secure_dummy + 1)
+	.word (_secure_dummy + 1)
+	.word (_secure_dummy + 1)
+	.word (_secure_dummy + 1)
+	.word (_secure_dummy + 1)
+	.word (_secure_dummy + 1)
+	.word (_secure_dummy + 1)
+	.word (_secure_dummy + 1)
+	.word (_secure_dummy + 1)
+
+	.word (_secure_dummy + 1)	; IRQ0
+	.word (_secure_dummy + 1)	; IRQ1
+	.word (_secure_dummy + 1)	; IRQ2
+	.word (_secure_dummy + 1)	; IRQ3
+	.word (_secure_dummy + 1)	; IRQ4
+	.word (_secure_dummy + 1)	; IRQ5
+	.word (_secure_dummy + 1)	; IRQ6
+	.word (_secure_dummy + 1)	; IRQ7
+	.word (_secure_dummy + 1)	; IRQ8
+	.word (_secure_dummy + 1)	; IRQ9
+	.word (_secure_dummy + 1)	; IRQ10
+	.word (_secure_dummy + 1)	; IRQ11
+	.word (_secure_dummy + 1)	; IRQ12
+	.word (_secure_dummy + 1)	; IRQ13
+	.word (_secure_dummy + 1)	; IRQ14
+	.word (_secure_dummy + 1)	; IRQ15
+	.word (_secure_dummy + 1)	; IRQ16
+	.word (_secure_dummy + 1)	; IRQ17
+	.word (_secure_dummy + 1)	; IRQ18
+	.word (_secure_dummy + 1)	; IRQ19
+	.word (_secure_dummy + 1)	; IRQ20
+	.word (_secure_dummy + 1)	; IRQ21
+	.word (_secure_dummy + 1)	; IRQ22
+	.word (_secure_dummy + 1)	; IRQ23
+	.word (_secure_dummy + 1)	; IRQ24
+	.word (_secure_dummy + 1)	; IRQ25
+	.word (_secure_dummy + 1)	; IRQ26
+	.word (_secure_dummy + 1)	; IRQ27
+	.word (_secure_dummy + 1)	; IRQ28
+	.word (_secure_dummy + 1)	; IRQ29
+	.word (_secure_dummy + 1)	; IRQ30
+	.word (_secure_dummy + 1)	; IRQ31
+	.word (_secure_dummy + 1)	; IRQ32
+	.word (_secure_dummy + 1)	; IRQ33
+	.word (RSIP_INTH2S0_Handler + 1)	; IRQ34 INTH2S0
+
+	.section ".text", .text
+	.align 4
+_secure_dummy:
+	nop
+	b _secure_dummy
